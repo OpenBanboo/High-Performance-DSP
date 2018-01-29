@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/IIR_mulcycle_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="IIR_mulcycle_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="34" />
+   <wvobject fp_name="/IIR_mulcycle_tb/din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[66:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[66:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/OVF_f0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_f0</obj_property>
+      <obj_property name="ObjectShortName">OVF_f0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/OVF_f1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_f1</obj_property>
+      <obj_property name="ObjectShortName">OVF_f1</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/OVF_b0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_b0</obj_property>
+      <obj_property name="ObjectShortName">OVF_b0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/OVF_b1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_b1</obj_property>
+      <obj_property name="ObjectShortName">OVF_b1</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_din" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_din</obj_property>
+      <obj_property name="ObjectShortName">real_din</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_dout" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_dout</obj_property>
+      <obj_property name="ObjectShortName">real_dout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/nReset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nReset</obj_property>
+      <obj_property name="ObjectShortName">nReset</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/CE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/Testdata_vec_IIR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Testdata_vec_IIR[49:0,15:0]</obj_property>
+      <obj_property name="ObjectShortName">Testdata_vec_IIR[49:0,15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/count_delay" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count_delay[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count_delay[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_din_tb" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_din_tb</obj_property>
+      <obj_property name="ObjectShortName">real_din_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_din_delay" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_din_delay</obj_property>
+      <obj_property name="ObjectShortName">real_din_delay</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_din_norm" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_din_norm</obj_property>
+      <obj_property name="ObjectShortName">real_din_norm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_mux_out" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_mux_out</obj_property>
+      <obj_property name="ObjectShortName">real_mux_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_x1" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_x1</obj_property>
+      <obj_property name="ObjectShortName">real_x1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_x2" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_x2</obj_property>
+      <obj_property name="ObjectShortName">real_x2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_xb0" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_xb0</obj_property>
+      <obj_property name="ObjectShortName">real_xb0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_x1b1" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_x1b1</obj_property>
+      <obj_property name="ObjectShortName">real_x1b1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_x2b2" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_x2b2</obj_property>
+      <obj_property name="ObjectShortName">real_x2b2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_x1b1x2b2" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_x1b1x2b2</obj_property>
+      <obj_property name="ObjectShortName">real_x1b1x2b2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_xb0x1b1x2b2" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_xb0x1b1x2b2</obj_property>
+      <obj_property name="ObjectShortName">real_xb0x1b1x2b2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_y" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_y</obj_property>
+      <obj_property name="ObjectShortName">real_y</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_y1" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_y1</obj_property>
+      <obj_property name="ObjectShortName">real_y1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_y2" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_y2</obj_property>
+      <obj_property name="ObjectShortName">real_y2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_y1_ma1" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_y1_ma1</obj_property>
+      <obj_property name="ObjectShortName">real_y1_ma1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_y2_ma2" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_y2_ma2</obj_property>
+      <obj_property name="ObjectShortName">real_y2_ma2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_y2_ma2_y1_ma1" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_y2_ma2_y1_ma1</obj_property>
+      <obj_property name="ObjectShortName">real_y2_ma2_y1_ma1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_tmp_scaled" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_tmp_scaled</obj_property>
+      <obj_property name="ObjectShortName">real_tmp_scaled</obj_property>
+   </wvobject>
+   <wvobject fp_name="/IIR_mulcycle_tb/real_tmp_result" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_tmp_result</obj_property>
+      <obj_property name="ObjectShortName">real_tmp_result</obj_property>
+   </wvobject>
+</wave_config>

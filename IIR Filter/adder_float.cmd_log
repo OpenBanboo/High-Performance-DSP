@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/adder_float.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/adder_float.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/adder_float.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/adder_float.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I "adder_float.ngc" adder_float.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o adder_float_map.ncd adder_float.ngd adder_float.pcf 
+par -w -intstyle ise -ol high -mt off adder_float_map.ncd adder_float.ncd adder_float.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml adder_float.twx adder_float.ncd -o adder_float.twr adder_float.pcf 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/adder_float.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/adder_float.syr" 

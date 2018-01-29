@@ -1,0 +1,6 @@
+verilog work "sMult.v"
+verilog work "register.v"
+verilog work "fixpoint_adder.v"
+verilog work "../HW5/sos.v"
+verilog work "sos_tb411.v"
+verilog work "E:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

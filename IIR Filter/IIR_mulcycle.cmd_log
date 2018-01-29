@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/IIR_mulcycle.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/IIR_mulcycle.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I "IIR_mulcycle.ngc" IIR_mulcycle.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o IIR_mulcycle_map.ncd IIR_mulcycle.ngd IIR_mulcycle.pcf 
+par -w -intstyle ise -ol high -mt off IIR_mulcycle_map.ncd IIR_mulcycle.ncd IIR_mulcycle.pcf 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/IIR_mulcycle.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/IIR_mulcycle.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/IIR_mulcycle.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/IIR_mulcycle.syr" 

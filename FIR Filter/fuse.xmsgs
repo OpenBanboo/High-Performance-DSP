@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/sMult.v" Line 22: Parameter declaration becomes local in <arg fmt="%s" index="1">sMult</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/sMult.v" Line 23: Parameter declaration becomes local in <arg fmt="%s" index="1">sMult</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/fixpoint_adder.v" Line 20: Parameter declaration becomes local in <arg fmt="%s" index="1">fixpoint_adder</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/fixpoint_adder.v" Line 21: Parameter declaration becomes local in <arg fmt="%s" index="1">fixpoint_adder</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/fixpoint_adder.v" Line 62: Parameter declaration becomes local in <arg fmt="%s" index="1">fixpoint_adder</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_N_small.v" Line 39: Port <arg fmt="%s" index="1">OVF</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="756" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/sMult.v" Line 35: Repetition multiplier must be positive
+</msg>
+
+</messages>
+

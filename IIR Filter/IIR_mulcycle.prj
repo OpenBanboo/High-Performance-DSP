@@ -1,0 +1,5 @@
+verilog work "sMult.v"
+verilog work "RAM_ar.v"
+verilog work "multiplexer.v"
+verilog work "fixpoint_adder.v"
+verilog work "IIR_mulcycle.v"

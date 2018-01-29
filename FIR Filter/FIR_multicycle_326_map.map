@@ -1,0 +1,205 @@
+Release 14.6 Map P.68d (nt64)
+Xilinx Map Application Log File for Design 'FIR_multicycle_326'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o FIR_multicycle_326_map.ncd FIR_multicycle_326.ngd
+FIR_multicycle_326.pcf 
+Target Device  : xa7a100t
+Target Package : csg324
+Target Speed   : -2i
+Mapper Version : aartix7 -- $Revision: 1.55 $
+Mapped Date    : Sun Apr 06 12:44:37 2014
+
+WARNING:LIT:701 - PAD symbol "y<15>" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "y<15>" is not constrained (LOC) to a specific
+   location.
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 15 secs 
+Total CPU  time at the beginning of Placer: 14 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:7d) REAL time: 16 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:7d) REAL time: 16 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:7d) REAL time: 16 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:7d) REAL time: 17 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:7d) REAL time: 17 secs 
+
+Phase 6.3  Local Placement Optimization
+
+Phase 6.3  Local Placement Optimization (Checksum:253b18) REAL time: 17 secs 
+
+Phase 7.5  Local Placement Optimization
+Phase 7.5  Local Placement Optimization (Checksum:253b18) REAL time: 17 secs 
+
+Phase 8.8  Global Placement
+Phase 8.8  Global Placement (Checksum:253b18) REAL time: 17 secs 
+
+Phase 9.5  Local Placement Optimization
+Phase 9.5  Local Placement Optimization (Checksum:253b18) REAL time: 17 secs 
+
+Phase 10.18  Placement Optimization
+Phase 10.18  Placement Optimization (Checksum:253b18) REAL time: 17 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:253b18) REAL time: 17 secs 
+
+Phase 12.34  Placement Validation
+Phase 12.34  Placement Validation (Checksum:253b18) REAL time: 17 secs 
+
+Total REAL time to Placer completion: 17 secs 
+Total CPU  time to Placer completion: 16 secs 
+Running post-placement packing...
+Writing output files...
+WARNING:PhysDesignRules:2452 - The IOB y<10> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<11> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<12> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<13> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<14> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<0> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<15> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<1> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<2> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<3> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<4> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<5> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<6> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<7> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<8> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB y<9> is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   18
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of 126,800    0%
+  Number of Slice LUTs:                          0 out of  63,400    0%
+
+Slice Logic Distribution:
+  Number of occupied Slices:                     0 out of  15,850    0%
+  Number of LUT Flip Flop pairs used:            0
+
+IO Utilization:
+  Number of bonded IOBs:                        16 out of     210    7%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     270    0%
+  Number of BUFG/BUFGCTRLs:                      0 out of      32    0%
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     300    0%
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      24    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      96    0%
+  Number of BUFRs:                               0 out of      24    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     240    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of IBUFDS_GTE2s:                        0 out of       4    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       6    0%
+  Number of IN_FIFOs:                            0 out of      24    0%
+  Number of MMCME2_ADVs:                         0 out of       6    0%
+  Number of OUT_FIFOs:                           0 out of      24    0%
+  Number of PCIE_2_1s:                           0 out of       1    0%
+  Number of PHASER_REFs:                         0 out of       6    0%
+  Number of PHY_CONTROLs:                        0 out of       6    0%
+  Number of PLLE2_ADVs:                          0 out of       6    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Peak Memory Usage:  753 MB
+Total REAL time to MAP completion:  18 secs 
+Total CPU time to MAP completion:   17 secs 
+
+Mapping completed.
+See MAP report file "FIR_multicycle_326_map.mrp" for details.

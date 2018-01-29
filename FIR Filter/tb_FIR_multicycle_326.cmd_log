@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_multicycle_326.syr" 

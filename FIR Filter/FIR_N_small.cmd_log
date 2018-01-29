@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_N_small.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_N_small.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_N_small.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_N_small.syr" 

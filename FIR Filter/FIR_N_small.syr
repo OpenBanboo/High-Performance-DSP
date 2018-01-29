@@ -1,0 +1,252 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.52 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.52 secs
+ 
+--> Reading design: FIR_N_small.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FIR_N_small.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FIR_N_small"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : FIR_N_small
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW1\HW1\register.v" into library work
+Parsing module <register>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\sMult.v" into library work
+Parsing module <sMult>.
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\sMult.v" Line 38. parameter declaration becomes local in sMult with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\sMult.v" Line 39. parameter declaration becomes local in sMult with formal parameter declaration list
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" into library work
+Parsing module <fixpoint_adder>.
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" Line 35. parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" Line 36. parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" Line 77. parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" into library work
+Parsing module <FIR_N_small>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 115: Port OVF is not connected to this instance
+
+Elaborating module <FIR_N_small>.
+Reading initialization file \"Coef.txt\".
+WARNING:HDLCompiler:91 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 75: Signal <counter_xin> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 77: Signal <counter_xin> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 80: Signal <x_mem> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 84: Signal <counter_xin> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 99: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <sMult(WI1=1,WF1=15,WI2=1,WF2=15,WIO=1,WFO=15)>.
+
+Elaborating module <fixpoint_adder(WI1=1,WF1=15,WI2=1,WF2=15,WIO=1,WFO=15)>.
+
+Elaborating module <register(N=16)>.
+ERROR:HDLCompiler:1401 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 37: Signal pointer[2] in unit FIR_N_small is connected to following multiple drivers:
+Driver 0: output signal pointer[2] of instance Flip-flop (pointer).
+Driver 1: output signal pointer[2] of instance Latch (pointer[2]).
+Driver 0: output signal pointer[1] of instance Flip-flop (pointer).
+Driver 1: output signal pointer[1] of instance Latch (pointer[1]).
+Driver 0: output signal pointer[0] of instance Flip-flop (pointer).
+Driver 1: output signal pointer[0] of instance Latch (pointer[0]).
+Driver 0: output signal x_mem[2][15] of instance Latch (x_mem[2][15]).
+Driver 1: output signal x_mem[2][15] of instance Latch (_i000017).
+Driver 0: output signal x_mem[2][14] of instance Latch (x_mem[2][14]).
+Driver 1: output signal x_mem[2][14] of instance Latch (_i000018).
+Driver 0: output signal x_mem[2][13] of instance Latch (x_mem[2][13]).
+Driver 1: output signal x_mem[2][13] of instance Latch (_i000019).
+Driver 0: output signal x_mem[2][12] of instance Latch (x_mem[2][12]).
+Driver 1: output signal x_mem[2][12] of instance Latch (_i000020).
+Driver 0: output signal x_mem[2][11] of instance Latch (x_mem[2][11]).
+Driver 1: output signal x_mem[2][11] of instance Latch (_i000021).
+Driver 0: output signal x_mem[2][10] of instance Latch (x_mem[2][10]).
+Driver 1: output signal x_mem[2][10] of instance Latch (_i000022).
+Driver 0: output signal x_mem[2][9] of instance Latch (x_mem[2][9]).
+Driver 1: output signal x_mem[2][9] of instance Latch (_i000023).
+Driver 0: output signal x_mem[2][8] of instance Latch (x_mem[2][8]).
+Driver 1: output signal x_mem[2][8] of instance Latch (_i000024).
+Driver 0: output signal x_mem[2][7] of instance Latch (x_mem[2][7]).
+Driver 1: output signal x_mem[2][7] of instance Latch (_i000025).
+Driver 0: output signal x_mem[2][6] of instance Latch (x_mem[2][6]).
+Driver 1: output signal x_mem[2][6] of instance Latch (_i000026).
+Driver 0: output signal x_mem[2][5] of instance Latch (x_mem[2][5]).
+Driver 1: output signal x_mem[2][5] of instance Latch (_i000027).
+Driver 0: output signal x_mem[2][4] of instance Latch (x_mem[2][4]).
+Driver 1: output signal x_mem[2][4] of instance Latch (_i000028).
+Driver 0: output signal x_mem[2][3] of instance Latch (x_mem[2][3]).
+Driver 1: output signal x_mem[2][3] of instance Latch (_i000029).
+Driver 0: output signal x_mem[2][2] of instance Latch (x_mem[2][2]).
+Driver 1: output signal x_mem[2][2] of instance Latch (_i000030).
+Driver 0: output signal x_mem[2][1] of instance Latch (x_mem[2][1]).
+Driver 1: output signal x_mem[2][1] of instance Latch (_i000031).
+Driver 0: output signal x_mem[2][0] of instance Latch (x_mem[2][0]).
+Driver 1: output signal x_mem[2][0] of instance Latch (_i000032).
+Driver 0: output signal x_mem[1][15] of instance Latch (x_mem[1][15]).
+Driver 1: output signal x_mem[1][15] of instance Latch (_i000033).
+Driver 0: output signal x_mem[1][14] of instance Latch (x_mem[1][14]).
+Driver 1: output signal x_mem[1][14] of instance Latch (_i000034).
+Driver 0: output signal x_mem[1][13] of instance Latch (x_mem[1][13]).
+Driver 1: output signal x_mem[1][13] of instance Latch (_i000035).
+Driver 0: output signal x_mem[1][12] of instance Latch (x_mem[1][12]).
+Driver 1: output signal x_mem[1][12] of instance Latch (_i000036).
+Driver 0: output signal x_mem[1][11] of instance Latch (x_mem[1][11]).
+Driver 1: output signal x_mem[1][11] of instance Latch (_i000037).
+Driver 0: output signal x_mem[1][10] of instance Latch (x_mem[1][10]).
+Driver 1: output signal x_mem[1][10] of instance Latch (_i000038).
+Driver 0: output signal x_mem[1][9] of instance Latch (x_mem[1][9]).
+Driver 1: output signal x_mem[1][9] of instance Latch (_i000039).
+Driver 0: output signal x_mem[1][8] of instance Latch (x_mem[1][8]).
+Driver 1: output signal x_mem[1][8] of instance Latch (_i000040).
+Driver 0: output signal x_mem[1][7] of instance Latch (x_mem[1][7]).
+Driver 1: output signal x_mem[1][7] of instance Latch (_i000041).
+Driver 0: output signal x_mem[1][6] of instance Latch (x_mem[1][6]).
+Driver 1: output signal x_mem[1][6] of instance Latch (_i000042).
+Driver 0: output signal x_mem[1][5] of instance Latch (x_mem[1][5]).
+Driver 1: output signal x_mem[1][5] of instance Latch (_i000043).
+Driver 0: output signal x_mem[1][4] of instance Latch (x_mem[1][4]).
+Driver 1: output signal x_mem[1][4] of instance Latch (_i000044).
+Driver 0: output signal x_mem[1][3] of instance Latch (x_mem[1][3]).
+Driver 1: output signal x_mem[1][3] of instance Latch (_i000045).
+Driver 0: output signal x_mem[1][2] of instance Latch (x_mem[1][2]).
+Driver 1: output signal x_mem[1][2] of instance Latch (_i000046).
+Driver 0: output signal x_mem[1][1] of instance Latch (x_mem[1][1]).
+Driver 1: output signal x_mem[1][1] of instance Latch (_i000047).
+Driver 0: output signal x_mem[1][0] of instance Latch (x_mem[1][0]).
+Driver 1: output signal x_mem[1][0] of instance Latch (_i000048).
+Driver 0: output signal x_mem[0][15] of instance Latch (x_mem[0][15]).
+Driver 1: output signal x_mem[0][15] of instance Latch (_i000049).
+Driver 0: output signal x_mem[0][14] of instance Latch (x_mem[0][14]).
+Driver 1: output signal x_mem[0][14] of instance Latch (_i000050).
+Driver 0: output signal x_mem[0][13] of instance Latch (x_mem[0][13]).
+Driver 1: output signal x_mem[0][13] of instance Latch (_i000051).
+Driver 0: output signal x_mem[0][12] of instance Latch (x_mem[0][12]).
+Driver 1: output signal x_mem[0][12] of instance Latch (_i000052).
+Driver 0: output signal x_mem[0][11] of instance Latch (x_mem[0][11]).
+Driver 1: output signal x_mem[0][11] of instance Latch (_i000053).
+Driver 0: output signal x_mem[0][10] of instance Latch (x_mem[0][10]).
+Driver 1: output signal x_mem[0][10] of instance Latch (_i000054).
+Driver 0: output signal x_mem[0][9] of instance Latch (x_mem[0][9]).
+Driver 1: output signal x_mem[0][9] of instance Latch (_i000055).
+Driver 0: output signal x_mem[0][8] of instance Latch (x_mem[0][8]).
+Driver 1: output signal x_mem[0][8] of instance Latch (_i000056).
+Driver 0: output signal x_mem[0][7] of instance Latch (x_mem[0][7]).
+Driver 1: output signal x_mem[0][7] of instance Latch (_i000057).
+Driver 0: output signal x_mem[0][6] of instance Latch (x_mem[0][6]).
+Driver 1: output signal x_mem[0][6] of instance Latch (_i000058).
+Driver 0: output signal x_mem[0][5] of instance Latch (x_mem[0][5]).
+Driver 1: output signal x_mem[0][5] of instance Latch (_i000059).
+Driver 0: output signal x_mem[0][4] of instance Latch (x_mem[0][4]).
+Driver 1: output signal x_mem[0][4] of instance Latch (_i000060).
+Driver 0: output signal x_mem[0][3] of instance Latch (x_mem[0][3]).
+Driver 1: output signal x_mem[0][3] of instance Latch (_i000061).
+Driver 0: output signal x_mem[0][2] of instance Latch (x_mem[0][2]).
+Driver 1: output signal x_mem[0][2] of instance Latch (_i000062).
+Driver 0: output signal x_mem[0][1] of instance Latch (x_mem[0][1]).
+Driver 1: output signal x_mem[0][1] of instance Latch (_i000063).
+Driver 0: output signal x_mem[0][0] of instance Latch (x_mem[0][0]).
+Driver 1: output signal x_mem[0][0] of instance Latch (_i000064).
+Module FIR_N_small remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_N_small.v" Line 5: Empty module <FIR_N_small> remains a black box.
+--> 
+
+Total memory usage is 207604 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

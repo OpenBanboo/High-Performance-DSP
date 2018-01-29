@@ -1,0 +1,2 @@
+verilog work "register.v"
+verilog work "test_forGenerate.v"

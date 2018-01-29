@@ -1,0 +1,6 @@
+verilog isim_temp "sMult.v"
+verilog isim_temp "register.v"
+verilog isim_temp "fixpoint_adder.v"
+verilog isim_temp "sos_scaled.v"
+verilog isim_temp "sos_scaled_tb.v"
+verilog isim_temp "D:/Xilinx14.6/14.6/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,869 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: adder_float.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "adder_float.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "adder_float"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : adder_float
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\swap.v" into library work
+Parsing module <swap>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\nor_cor.v" into library work
+Parsing module <nor_cor>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\align.v" into library work
+Parsing module <align>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\add_sub.v" into library work
+Parsing module <add_sub>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\adder_float.v" into library work
+Parsing module <adder_float>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <adder_float>.
+
+Elaborating module <swap(WIDTH=32,WIDTH_exp=8,WIDTH_mat=23)>.
+WARNING:HDLCompiler:1127 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\adder_float.v" Line 53: Assignment to meq ignored, since the identifier is never used
+
+Elaborating module <align(WIDTH=32,WIDTH_exp=8,WIDTH_mat=23)>.
+
+Elaborating module <add_sub(WIDTH=48)>.
+
+Elaborating module <nor_cor(WIDTH=49,WIDTH_mat=23,WIDTH_exp=8)>.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\nor_cor.v" Line 67: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\nor_cor.v" Line 101: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\nor_cor.v" Line 116: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\nor_cor.v" Line 129: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\nor_cor.v" Line 132: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <adder_float>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\adder_float.v".
+        WIDTH = 32
+        WIDTH_exp = 8
+        WIDTH_mat = 23
+INFO:Xst:3210 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\adder_float.v" line 46: Output port <meq> of the instance <Fang_swap> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <adder_float> synthesized.
+
+Synthesizing Unit <swap>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\swap.v".
+        WIDTH = 32
+        WIDTH_exp = 8
+        WIDTH_mat = 23
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit comparator greater for signal <OP2[30]_OP1[30]_LessThan_1_o> created at line 48
+    Found 8-bit comparator greater for signal <OP1[30]_OP2[30]_LessThan_2_o> created at line 53
+    Found 23-bit comparator greater for signal <OP2[22]_OP1[22]_LessThan_3_o> created at line 59
+    Found 23-bit comparator greater for signal <OP1[22]_OP2[22]_LessThan_4_o> created at line 64
+    Found 1-bit comparator not equal for signal <OP1[31]_OP2[31]_equal_5_o> created at line 70
+    Summary:
+	inferred   5 Comparator(s).
+	inferred  19 Multiplexer(s).
+Unit <swap> synthesized.
+
+Synthesizing Unit <align>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\align.v".
+        WIDTH = 32
+        WIDTH_exp = 8
+        WIDTH_mat = 23
+WARNING:Xst:647 - Input <OP_L<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <OP_S<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit subtractor for signal <dif_exp> created at line 42.
+    Found 48-bit shifter logical right for signal <PWR_3_o_dif_exp[7]_shift_right_1_OUT> created at line 57
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <align> synthesized.
+
+Synthesizing Unit <add_sub>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\add_sub.v".
+        WIDTH = 48
+        WIDTH_OUT = 49
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 49-bit subtractor for signal <GND_5_o_GND_5_o_sub_1_OUT> created at line 39.
+    Found 49-bit adder for signal <n0014> created at line 41.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <add_sub> synthesized.
+
+Synthesizing Unit <nor_cor>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\nor_cor.v".
+        WIDTH = 49
+        WIDTH_mat = 23
+        WIDTH_exp = 8
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 7-bit subtractor for signal <GND_6_o_GND_6_o_sub_55_OUT> created at line 116.
+    Found 8-bit adder for signal <exp[7]_GND_6_o_add_50_OUT> created at line 101.
+    Found 24-bit adder for signal <tmp_mat[48]_GND_6_o_add_66_OUT> created at line 129.
+    Found 8-bit adder for signal <_n0692> created at line 132.
+    Found 8-bit subtractor for signal <GND_6_o_GND_6_o_sub_56_OUT<7:0>> created at line 116.
+    Found 49-bit shifter logical left for signal <mat_in[48]_pointer[5]_shift_left_57_OUT> created at line 121
+WARNING:Xst:737 - Found 1-bit latch for signal <pointer<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pointer<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pointer<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pointer<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pointer<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_exp<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <exception>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <tmp_mat<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <exce_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pointer<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator greater for signal <exp[7]_exp[7]_LessThan_52_o> created at line 102
+    Found 6-bit comparator greater for signal <GND_6_o_pointer[5]_LessThan_54_o> created at line 115
+    Found 8-bit comparator greater for signal <exp[7]_GND_6_o_LessThan_57_o> created at line 117
+    Found 24-bit comparator greater for signal <tmp_mat[48]_tmp_mat[48]_LessThan_68_o> created at line 131
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  65 Latch(s).
+	inferred   4 Comparator(s).
+	inferred 387 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <nor_cor> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 24-bit adder                                          : 1
+ 49-bit addsub                                         : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+# Latches                                              : 65
+ 1-bit latch                                           : 65
+# Comparators                                          : 9
+ 1-bit comparator not equal                            : 1
+ 23-bit comparator greater                             : 2
+ 24-bit comparator greater                             : 1
+ 6-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 411
+ 1-bit 2-to-1 multiplexer                              : 334
+ 24-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 13
+ 48-bit 2-to-1 multiplexer                             : 3
+ 49-bit 2-to-1 multiplexer                             : 3
+ 6-bit 2-to-1 multiplexer                              : 49
+ 8-bit 2-to-1 multiplexer                              : 6
+# Logic shifters                                       : 2
+ 48-bit shifter logical right                          : 1
+ 49-bit shifter logical left                           : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\Xilinx14.6\14.6\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\Xilinx14.6\14.6\ISE_DS\ISE\.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 24-bit adder                                          : 1
+ 49-bit addsub                                         : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+# Comparators                                          : 9
+ 1-bit comparator not equal                            : 1
+ 23-bit comparator greater                             : 2
+ 24-bit comparator greater                             : 1
+ 6-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 411
+ 1-bit 2-to-1 multiplexer                              : 334
+ 24-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 13
+ 48-bit 2-to-1 multiplexer                             : 3
+ 49-bit 2-to-1 multiplexer                             : 3
+ 6-bit 2-to-1 multiplexer                              : 49
+ 8-bit 2-to-1 multiplexer                              : 6
+# Logic shifters                                       : 2
+ 48-bit shifter logical right                          : 1
+ 49-bit shifter logical left                           : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <adder_float> ...
+
+Optimizing unit <swap> ...
+
+Optimizing unit <align> ...
+
+Optimizing unit <nor_cor> ...
+WARNING:Xst:1294 - Latch <tmp_mat_1> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_0> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_2> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_3> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_4> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_7> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_5> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_6> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_8> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_9> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_10> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_11> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_12> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_13> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_14> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_15> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_16> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_17> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_18> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_19> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_22> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_20> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_21> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_23> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <exception> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_1> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_0> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_2> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_3> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_4> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_7> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_5> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_6> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_8> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_9> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_10> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_11> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_12> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_13> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_14> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_15> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_17> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_18> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <tmp_mat_19> is equivalent to a wire in block <nor_cor>.
+WARNING:Xst:1294 - Latch <exception> is equivalent to a wire in block <nor_cor>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block adder_float, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : adder_float.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 908
+#      GND                         : 1
+#      LUT2                        : 53
+#      LUT3                        : 36
+#      LUT4                        : 181
+#      LUT5                        : 149
+#      LUT6                        : 280
+#      MUXCY                       : 118
+#      VCC                         : 1
+#      XORCY                       : 89
+# FlipFlops/Latches                : 7
+#      LD                          : 6
+#      LDE                         : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 99
+#      IBUF                        : 66
+#      OBUF                        : 33
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               6  out of  126800     0%  
+ Number of Slice LUTs:                  699  out of  63400     1%  
+    Number used as Logic:               699  out of  63400     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    699
+   Number with an unused Flip Flop:     693  out of    699    99%  
+   Number with an unused LUT:             0  out of    699     0%  
+   Number of fully used LUT-FF pairs:     6  out of    699     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         100
+ Number of bonded IOBs:                  99  out of    210    47%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                                                                  | Clock buffer(FF name)          | Load  |
+----------------------------------------------------------------------------------------------+--------------------------------+-------+
+Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o(Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o<0>4:O)| NONE(*)(Fang_nor_cor/pointer_0)| 6     |
+RST                                                                                           | IBUF+BUFG                      | 1     |
+----------------------------------------------------------------------------------------------+--------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 20.996ns
+   Maximum output required time after clock: 11.328ns
+   Maximum combinational path delay: 22.335ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o'
+  Total number of paths / destination ports: 459538768 / 6
+-------------------------------------------------------------------------
+Offset:              12.998ns (Levels of Logic = 51)
+  Source:            OP2<0> (PAD)
+  Destination:       Fang_nor_cor/pointer_0 (LATCH)
+  Destination Clock: Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o falling
+
+  Data Path: OP2<0> to Fang_nor_cor/pointer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.001   0.650  OP2_0_IBUF (OP2_0_IBUF)
+     LUT4:I0->O            1   0.097   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_lut<0> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<0> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<1> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<2> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<3> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<4> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<5> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<6> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<7> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<8> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<9> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<9>)
+     MUXCY:CI->O           1   0.253   0.571  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<10> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<10>)
+     LUT3:I0->O            3   0.097   0.628  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<11> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<11>)
+     LUT5:I1->O           93   0.097   0.757  Fang_swap/Mmux_OP_L1101 (Fang_swap/Mmux_OP_L110)
+     LUT4:I0->O            0   0.097   0.000  Fang_swap/Mmux_OP_L161 (OP_L<23>)
+     MUXCY:DI->O           1   0.337   0.000  Fang_align/Msub_dif_exp_cy<0> (Fang_align/Msub_dif_exp_cy<0>)
+     XORCY:CI->O          31   0.370   0.873  Fang_align/Msub_dif_exp_xor<1> (Fang_align/dif_exp<1>)
+     LUT6:I1->O            4   0.097   0.372  Fang_align/Sh431 (Fang_align/Sh43)
+     LUT5:I4->O            3   0.097   0.367  Fang_align/Sh911 (Fang_align/Sh91)
+     LUT5:I4->O            1   0.097   0.571  Fang_align/Mmux_mat_S3_SW0 (N33)
+     LUT6:I3->O            1   0.097   0.743  Fang_align/Mmux_mat_S3 (mat_S<11>)
+     LUT5:I0->O            1   0.097   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_lut<11> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_lut<11>)
+     MUXCY:S->O            1   0.353   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<11> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<12> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<13> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<14> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<15> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<16> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<17> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<18> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<19> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<20> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<21> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<22> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<23> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<24> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<25> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<26> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<27> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<28> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<29> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<29>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<30> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<30>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<31> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<31>)
+     XORCY:CI->O           5   0.370   0.378  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_xor<32> (Fang_addsub/BUS_0001_GND_5_o_mux_2_OUT<32>)
+     LUT2:I1->O            4   0.097   0.770  Fang_addsub/Mmux_dout261 (mat_in<32>)
+     LUT6:I0->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836231 (Fang_nor_cor/Mmux__n06836231)
+     LUT6:I3->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836232 (Fang_nor_cor/Mmux__n06836232)
+     LUT6:I3->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836233 (Fang_nor_cor/Mmux__n06836233)
+     LUT6:I3->O            2   0.097   0.444  Fang_nor_cor/Mmux__n06836234 (Fang_nor_cor/Mmux__n0683623)
+     LUT6:I4->O            1   0.097   0.000  Fang_nor_cor/Mmux_pointer[5]_GND_6_o_MUX_1167_o1 (Fang_nor_cor/pointer[5]_GND_6_o_MUX_1167_o)
+     LD:D                     -0.028          Fang_nor_cor/pointer_0
+    ----------------------------------------
+    Total                     12.998ns (4.159ns logic, 8.839ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST'
+  Total number of paths / destination ports: 4044066474107 / 2
+-------------------------------------------------------------------------
+Offset:              20.996ns (Levels of Logic = 69)
+  Source:            OP2<0> (PAD)
+  Destination:       Fang_nor_cor/exce_out (LATCH)
+  Destination Clock: RST falling
+
+  Data Path: OP2<0> to Fang_nor_cor/exce_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.001   0.650  OP2_0_IBUF (OP2_0_IBUF)
+     LUT4:I0->O            1   0.097   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_lut<0> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<0> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<1> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<2> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<3> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<4> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<5> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<6> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<7> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<8> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<9> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<9>)
+     MUXCY:CI->O           1   0.253   0.571  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<10> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<10>)
+     LUT3:I0->O            3   0.097   0.628  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<11> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<11>)
+     LUT5:I1->O           93   0.097   0.757  Fang_swap/Mmux_OP_L1101 (Fang_swap/Mmux_OP_L110)
+     LUT4:I0->O            0   0.097   0.000  Fang_swap/Mmux_OP_L161 (OP_L<23>)
+     MUXCY:DI->O           1   0.337   0.000  Fang_align/Msub_dif_exp_cy<0> (Fang_align/Msub_dif_exp_cy<0>)
+     XORCY:CI->O          31   0.370   0.873  Fang_align/Msub_dif_exp_xor<1> (Fang_align/dif_exp<1>)
+     LUT6:I1->O            4   0.097   0.372  Fang_align/Sh431 (Fang_align/Sh43)
+     LUT5:I4->O            3   0.097   0.367  Fang_align/Sh911 (Fang_align/Sh91)
+     LUT5:I4->O            1   0.097   0.571  Fang_align/Mmux_mat_S3_SW0 (N33)
+     LUT6:I3->O            1   0.097   0.743  Fang_align/Mmux_mat_S3 (mat_S<11>)
+     LUT5:I0->O            1   0.097   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_lut<11> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_lut<11>)
+     MUXCY:S->O            1   0.353   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<11> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<12> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<13> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<14> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<15> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<16> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<17> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<18> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<19> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<20> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<21> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<22> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<23> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<24> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<25> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<26> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<27> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<28> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<29> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<29>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<30> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<30>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<31> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<31>)
+     XORCY:CI->O           5   0.370   0.378  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_xor<32> (Fang_addsub/BUS_0001_GND_5_o_mux_2_OUT<32>)
+     LUT2:I1->O            4   0.097   0.770  Fang_addsub/Mmux_dout261 (mat_in<32>)
+     LUT6:I0->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836231 (Fang_nor_cor/Mmux__n06836231)
+     LUT6:I3->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836232 (Fang_nor_cor/Mmux__n06836232)
+     LUT6:I3->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836233 (Fang_nor_cor/Mmux__n06836233)
+     LUT6:I3->O            2   0.097   0.444  Fang_nor_cor/Mmux__n06836234 (Fang_nor_cor/Mmux__n0683623)
+     LUT6:I4->O           79   0.097   0.882  Fang_nor_cor/Mmux__n068364 (Fang_nor_cor/Msub_GND_6_o_GND_6_o_sub_55_OUT_cy<0>)
+     LUT6:I1->O            5   0.097   0.776  Fang_nor_cor/Sh21 (Fang_nor_cor/Sh2)
+     LUT6:I0->O            2   0.097   0.576  Fang_nor_cor/Sh6311 (Fang_nor_cor/Sh631)
+     LUT5:I2->O            2   0.097   0.621  Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>2 (Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>2)
+     LUT6:I2->O            1   0.097   0.000  Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>31 (Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>3)
+     MUXCY:S->O            1   0.353   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<13> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<14> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<15> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<16> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<17> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<18> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<19> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<20> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<20>)
+     XORCY:CI->O           3   0.370   0.628  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_xor<21> (Fang_nor_cor/tmp_mat[48]_GND_6_o_add_66_OUT<21>)
+     LUT4:I0->O            0   0.097   0.000  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_lutdi10 (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_lutdi10)
+     MUXCY:DI->O           1   0.567   0.355  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<10> (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<10>)
+     LUT5:I4->O           32   0.097   0.701  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<11> (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<11>)
+     LUT3:I0->O            9   0.097   0.798  Fang_nor_cor/Mmux_result1611 (Fang_nor_cor/Mmux_result161)
+     LUT6:I0->O            1   0.097   0.339  Fang_nor_cor/exce_in_clear_OR_470_o1 (Fang_nor_cor/exce_in_clear_OR_470_o)
+     LDE:GE                    0.095          Fang_nor_cor/exce_out
+    ----------------------------------------
+    Total                     20.996ns (6.481ns logic, 14.515ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o'
+  Total number of paths / destination ports: 1742891 / 32
+-------------------------------------------------------------------------
+Offset:              11.328ns (Levels of Logic = 23)
+  Source:            Fang_nor_cor/pointer_0 (LATCH)
+  Destination:       result<22> (PAD)
+  Source Clock:      Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o falling
+
+  Data Path: Fang_nor_cor/pointer_0 to result<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.753  Fang_nor_cor/pointer_0 (Fang_nor_cor/pointer_0)
+     LUT6:I0->O            1   0.097   0.571  Fang_nor_cor/Mmux__n068362 (Fang_nor_cor/Mmux__n068361)
+     LUT6:I3->O           79   0.097   0.882  Fang_nor_cor/Mmux__n068364 (Fang_nor_cor/Msub_GND_6_o_GND_6_o_sub_55_OUT_cy<0>)
+     LUT6:I1->O            5   0.097   0.776  Fang_nor_cor/Sh21 (Fang_nor_cor/Sh2)
+     LUT6:I0->O            2   0.097   0.576  Fang_nor_cor/Sh6311 (Fang_nor_cor/Sh631)
+     LUT5:I2->O            2   0.097   0.621  Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>2 (Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>2)
+     LUT6:I2->O            1   0.097   0.000  Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>31 (Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>3)
+     MUXCY:S->O            1   0.353   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<13> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<14> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<15> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<16> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<17> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<18> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<19> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<20> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<20>)
+     XORCY:CI->O           3   0.370   0.628  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_xor<21> (Fang_nor_cor/tmp_mat[48]_GND_6_o_add_66_OUT<21>)
+     LUT4:I0->O            0   0.097   0.000  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_lutdi10 (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_lutdi10)
+     MUXCY:DI->O           1   0.567   0.355  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<10> (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<10>)
+     LUT5:I4->O           32   0.097   0.701  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<11> (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<11>)
+     LUT3:I0->O            9   0.097   0.788  Fang_nor_cor/Mmux_result1611 (Fang_nor_cor/Mmux_result161)
+     LUT5:I0->O            3   0.097   0.367  Fang_nor_cor/exce_in_exception_OR_469_o10 (Fang_nor_cor/exce_in_exception_OR_469_o)
+     LUT3:I2->O           32   0.097   0.883  Fang_nor_cor/Mmux_result11111 (Fang_nor_cor/Mmux_result1111)
+     LUT6:I0->O            1   0.097   0.339  Fang_nor_cor/Mmux_result16 (result_0_OBUF)
+     OBUF:I->O                 0.000          result_0_OBUF (result<0>)
+    ----------------------------------------
+    Total                     11.328ns (3.087ns logic, 8.241ns route)
+                                       (27.3% logic, 72.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.811ns (Levels of Logic = 1)
+  Source:            Fang_nor_cor/exce_out (LATCH)
+  Destination:       exce_out (PAD)
+  Source Clock:      RST falling
+
+  Data Path: Fang_nor_cor/exce_out to exce_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.472   0.339  Fang_nor_cor/exce_out (Fang_nor_cor/exce_out)
+     OBUF:I->O                 0.000          exce_out_OBUF (exce_out)
+    ----------------------------------------
+    Total                      0.811ns (0.472ns logic, 0.339ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 155236358083457 / 32
+-------------------------------------------------------------------------
+Delay:               22.335ns (Levels of Logic = 72)
+  Source:            OP2<0> (PAD)
+  Destination:       result<22> (PAD)
+
+  Data Path: OP2<0> to result<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.001   0.650  OP2_0_IBUF (OP2_0_IBUF)
+     LUT4:I0->O            1   0.097   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_lut<0> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<0> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<1> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<2> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<3> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<4> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<5> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<6> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<7> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<8> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<9> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<9>)
+     MUXCY:CI->O           1   0.253   0.571  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<10> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<10>)
+     LUT3:I0->O            3   0.097   0.628  Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<11> (Fang_swap/Mcompar_OP1[22]_OP2[22]_LessThan_4_o_cy<11>)
+     LUT5:I1->O           93   0.097   0.757  Fang_swap/Mmux_OP_L1101 (Fang_swap/Mmux_OP_L110)
+     LUT4:I0->O            0   0.097   0.000  Fang_swap/Mmux_OP_L161 (OP_L<23>)
+     MUXCY:DI->O           1   0.337   0.000  Fang_align/Msub_dif_exp_cy<0> (Fang_align/Msub_dif_exp_cy<0>)
+     XORCY:CI->O          31   0.370   0.873  Fang_align/Msub_dif_exp_xor<1> (Fang_align/dif_exp<1>)
+     LUT6:I1->O            4   0.097   0.372  Fang_align/Sh431 (Fang_align/Sh43)
+     LUT5:I4->O            3   0.097   0.367  Fang_align/Sh911 (Fang_align/Sh91)
+     LUT5:I4->O            1   0.097   0.571  Fang_align/Mmux_mat_S3_SW0 (N33)
+     LUT6:I3->O            1   0.097   0.743  Fang_align/Mmux_mat_S3 (mat_S<11>)
+     LUT5:I0->O            1   0.097   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_lut<11> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_lut<11>)
+     MUXCY:S->O            1   0.353   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<11> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<12> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<13> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<14> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<15> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<16> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<17> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<18> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<19> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<20> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<21> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<22> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<23> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<24> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<25> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<26> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<27> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<28> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<29> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<29>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<30> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<30>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<31> (Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_cy<31>)
+     XORCY:CI->O           5   0.370   0.378  Fang_addsub/Maddsub_BUS_0001_GND_5_o_mux_2_OUT_xor<32> (Fang_addsub/BUS_0001_GND_5_o_mux_2_OUT<32>)
+     LUT2:I1->O            4   0.097   0.770  Fang_addsub/Mmux_dout261 (mat_in<32>)
+     LUT6:I0->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836231 (Fang_nor_cor/Mmux__n06836231)
+     LUT6:I3->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836232 (Fang_nor_cor/Mmux__n06836232)
+     LUT6:I3->O            1   0.097   0.571  Fang_nor_cor/Mmux__n06836233 (Fang_nor_cor/Mmux__n06836233)
+     LUT6:I3->O            2   0.097   0.444  Fang_nor_cor/Mmux__n06836234 (Fang_nor_cor/Mmux__n0683623)
+     LUT6:I4->O           79   0.097   0.882  Fang_nor_cor/Mmux__n068364 (Fang_nor_cor/Msub_GND_6_o_GND_6_o_sub_55_OUT_cy<0>)
+     LUT6:I1->O            5   0.097   0.776  Fang_nor_cor/Sh21 (Fang_nor_cor/Sh2)
+     LUT6:I0->O            2   0.097   0.576  Fang_nor_cor/Sh6311 (Fang_nor_cor/Sh631)
+     LUT5:I2->O            2   0.097   0.621  Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>2 (Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>2)
+     LUT6:I2->O            1   0.097   0.000  Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>31 (Fang_nor_cor/tmp_mat[48]_mat_in[48]_mux_63_OUT<38>3)
+     MUXCY:S->O            1   0.353   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<13> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<14> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<15> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<16> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<17> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<18> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<19> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<20> (Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_cy<20>)
+     XORCY:CI->O           3   0.370   0.628  Fang_nor_cor/Madd_tmp_mat[48]_GND_6_o_add_66_OUT_xor<21> (Fang_nor_cor/tmp_mat[48]_GND_6_o_add_66_OUT<21>)
+     LUT4:I0->O            0   0.097   0.000  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_lutdi10 (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_lutdi10)
+     MUXCY:DI->O           1   0.567   0.355  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<10> (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<10>)
+     LUT5:I4->O           32   0.097   0.701  Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<11> (Fang_nor_cor/Mcompar_tmp_mat[48]_tmp_mat[48]_LessThan_68_o_cy<11>)
+     LUT3:I0->O            9   0.097   0.788  Fang_nor_cor/Mmux_result1611 (Fang_nor_cor/Mmux_result161)
+     LUT5:I0->O            3   0.097   0.367  Fang_nor_cor/exce_in_exception_OR_469_o10 (Fang_nor_cor/exce_in_exception_OR_469_o)
+     LUT3:I2->O           32   0.097   0.883  Fang_nor_cor/Mmux_result11111 (Fang_nor_cor/Mmux_result1111)
+     LUT6:I0->O            1   0.097   0.339  Fang_nor_cor/Mmux_result16 (result_0_OBUF)
+     OBUF:I->O                 0.000          result_0_OBUF (result<0>)
+    ----------------------------------------
+    Total                     22.335ns (6.580ns logic, 15.755ns route)
+                                       (29.5% logic, 70.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock RST
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o|         |         |    9.989|         |
+-------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.68 secs
+ 
+--> 
+
+Total memory usage is 786176 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  123 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

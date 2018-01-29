@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 "FIR_multicycle_326.ngc" FIR_multicycle_326.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FIR_multicycle_326_map.ncd FIR_multicycle_326.ngd FIR_multicycle_326.pcf 
+par -w -intstyle ise -ol high -mt off FIR_multicycle_326_map.ncd FIR_multicycle_326.ncd FIR_multicycle_326.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FIR_multicycle_326.twx FIR_multicycle_326.ncd -o FIR_multicycle_326.twr FIR_multicycle_326.pcf 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 "FIR_multicycle_326.ngc" FIR_multicycle_326.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FIR_multicycle_326_map.ncd FIR_multicycle_326.ngd FIR_multicycle_326.pcf 
+par -w -intstyle ise -ol high -mt off FIR_multicycle_326_map.ncd FIR_multicycle_326.ncd FIR_multicycle_326.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FIR_multicycle_326.twx FIR_multicycle_326.ncd -o FIR_multicycle_326.twr FIR_multicycle_326.pcf 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I "FIR_multicycle_326.ngc" FIR_multicycle_326.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o FIR_multicycle_326_map.ncd FIR_multicycle_326.ngd FIR_multicycle_326.pcf 
+par -w -intstyle ise -ol high -mt off FIR_multicycle_326_map.ncd FIR_multicycle_326.ncd FIR_multicycle_326.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml FIR_multicycle_326.twx FIR_multicycle_326.ncd -o FIR_multicycle_326.twr FIR_multicycle_326.pcf 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I "FIR_multicycle_326.ngc" FIR_multicycle_326.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o FIR_multicycle_326_map.ncd FIR_multicycle_326.ngd FIR_multicycle_326.pcf 
+par -w -intstyle ise -ol high -mt off FIR_multicycle_326_map.ncd FIR_multicycle_326.ncd FIR_multicycle_326.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml FIR_multicycle_326.twx FIR_multicycle_326.ncd -o FIR_multicycle_326.twr FIR_multicycle_326.pcf 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_multicycle_326.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I "FIR_multicycle_326.ngc" FIR_multicycle_326.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o FIR_multicycle_326_map.ncd FIR_multicycle_326.ngd FIR_multicycle_326.pcf 
+par -w -intstyle ise -ol high -mt off FIR_multicycle_326_map.ncd FIR_multicycle_326.ncd FIR_multicycle_326.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml FIR_multicycle_326.twx FIR_multicycle_326.ncd -o FIR_multicycle_326.twr FIR_multicycle_326.pcf 

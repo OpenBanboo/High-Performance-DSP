@@ -1,0 +1,805 @@
+Release 14.6 Map P.68d (nt64)
+Xilinx Mapping Report File for Design 'adder_float'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o adder_float_map.ncd adder_float.ngd adder_float.pcf 
+Target Device  : xa7a100t
+Target Package : csg324
+Target Speed   : -2i
+Mapper Version : aartix7 -- $Revision: 1.55 $
+Mapped Date    : Tue Apr 29 11:53:25 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  102
+Slice Logic Utilization:
+  Number of Slice Registers:                     6 out of 126,800    1%
+    Number used as Flip Flops:                   0
+    Number used as Latches:                      6
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        596 out of  63,400    1%
+    Number used as logic:                      596 out of  63,400    1%
+      Number using O6 output only:             424
+      Number using O5 output only:               1
+      Number using O5 and O6:                  171
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  19,000    0%
+    Number used exclusively as route-thrus:      0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   245 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          596
+    Number with an unused Flip Flop:           590 out of     596   98%
+    Number with an unused LUT:                   0 out of     596    0%
+    Number of fully used LUT-FF pairs:           6 out of     596    1%
+    Number of unique control sets:               1
+    Number of slice register sites lost
+      to control set restrictions:               2 out of 126,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        99 out of     210   47%
+    IOB Latches:                                 1
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     270    0%
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        1 out of     300    1%
+    Number used as OLOGICE2s:                    1
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      24    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      96    0%
+  Number of BUFRs:                               0 out of      24    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     240    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of IBUFDS_GTE2s:                        0 out of       4    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       6    0%
+  Number of IN_FIFOs:                            0 out of      24    0%
+  Number of MMCME2_ADVs:                         0 out of       6    0%
+  Number of OUT_FIFOs:                           0 out of      24    0%
+  Number of PCIE_2_1s:                           0 out of       1    0%
+  Number of PHASER_REFs:                         0 out of       6    0%
+  Number of PHY_CONTROLs:                        0 out of       6    0%
+  Number of PLLE2_ADVs:                          0 out of       6    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.17
+
+Peak Memory Usage:  788 MB
+Total REAL time to MAP completion:  30 secs 
+Total CPU time to MAP completion:   25 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:701 - PAD symbol "RST" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "RST" is not constrained (LOC) to a specific
+   location.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Fang_nor_cor/mat_in[48]_mat_in[47]_OR_159_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:2452 - The IOB result<17> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<18> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<15> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<16> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<16> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<15> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<18> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<17> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<19> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<22> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<21> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<24> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<10> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<23> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<13> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<20> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<14> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<11> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<12> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<29> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<27> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<28> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<25> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<26> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<26> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<25> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<28> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<27> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<29> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<31> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<20> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<23> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<30> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<24> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<21> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<22> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<30> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<31> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB exce_in is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB exce_out is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB RST is either not constrained (LOC) to a
+   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<12> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<11> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<14> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<13> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<10> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<19> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<0> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<16> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<1> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<15> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<2> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<18> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<3> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<17> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<4> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<22> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<5> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<21> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<6> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<24> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<7> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<23> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<8> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<9> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<20> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<29> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<26> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<25> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<28> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<27> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<31> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<30> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<9> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<5> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<6> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<7> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<8> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<1> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<2> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<3> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<4> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB result<0> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<0> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<1> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<2> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<3> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<4> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<5> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<6> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<7> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<8> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP2<9> is either not constrained (LOC) to
+   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
+   condition may seriously affect the device and will be an error in bitstream
+   creation. It should be corrected by properly specifying the pin location and
+   I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<12> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<11> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<14> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<13> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<10> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB OP1<19> is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network CLK has no load.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 100.000 Celsius. (default - Range:
+   -40.000 to 100.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| OP1<0>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<1>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<2>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<3>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<4>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<5>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<6>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<7>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<8>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<9>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<10>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<11>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<12>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<13>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<14>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<15>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<16>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<17>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<18>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<19>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<20>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<21>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<22>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<23>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<24>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<25>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<26>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<27>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<28>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<29>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<30>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP1<31>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<0>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<1>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<2>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<3>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<4>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<5>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<6>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<7>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<8>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<9>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<10>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<11>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<12>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<13>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<14>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<15>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<16>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<17>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<18>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<19>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<20>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<21>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<22>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<23>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<24>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<25>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<26>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<27>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<28>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<29>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<30>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| OP2<31>                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| RST                                | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| exce_in                            | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| exce_out                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OLATCH       |          |          |
+| result<0>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<1>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<2>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<3>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<4>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<5>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<6>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<7>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<8>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<9>                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<10>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<11>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<12>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<13>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<14>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<15>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<16>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<17>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<18>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<19>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<20>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<21>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<22>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<23>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<24>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<25>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<26>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<27>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<28>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<29>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<30>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| result<31>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

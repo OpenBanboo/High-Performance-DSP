@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="HW6-IIR" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Division_NR_signed_32bit_212 D:|Synchronous|Graduate Studies|Thesis|Division|Division_NR_Rec_2.1|Division_NR_Rec_2.1|Division_NR_signed_32bit_212.v</ClosedNode>
+         <ClosedNode>/FIR_multicycle_326 D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW5|FIR_multicycle_326.v</ClosedNode>
+         <ClosedNode>/IIR C:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR.v/sos_Fang - sos_scaled</ClosedNode>
+         <ClosedNode>/IIR D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR.v</ClosedNode>
+         <ClosedNode>/IIR D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR.v/sos_Fang - sos_scaled</ClosedNode>
+         <ClosedNode>/IIR_mulcycle C:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_mulcycle.v</ClosedNode>
+         <ClosedNode>/IIR_mulcycle D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_mulcycle.v</ClosedNode>
+         <ClosedNode>/IIR_normal D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_normal.v</ClosedNode>
+         <ClosedNode>/IIR_normal_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_normal_tb.v</ClosedNode>
+         <ClosedNode>/IIR_normal_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_normal_tb.v/uut - IIR_normal</ClosedNode>
+         <ClosedNode>/adder_float C:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|adder_float.v</ClosedNode>
+         <ClosedNode>/adder_float D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|adder_float.v</ClosedNode>
+         <ClosedNode>/sos D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW5|sos.v</ClosedNode>
+         <ClosedNode>/tb_Division_NR_2_1_17 D:|Synchronous|Graduate Studies|Thesis|Division|NR|24bit_nr_veri|tb_Division_NR_2_1_17.v</ClosedNode>
+         <ClosedNode>/tb_FIR_multicycle_326 D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW5|tb_FIR_multicycle_326.v</ClosedNode>
+         <ClosedNode>/tb_FIR_multicycle_326 D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW5|tb_FIR_multicycle_326.v/uut - FIR_multicycle_326</ClosedNode>
+         <ClosedNode>/tb_fixpoint_adder D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|tb_fixpoint_adder.v</ClosedNode>
+         <ClosedNode>/tb_sMult C:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|tb_sMult.v</ClosedNode>
+         <ClosedNode>/tb_sMult D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|tb_sMult.v</ClosedNode>
+         <ClosedNode>/test_forGenerate C:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|test_forGenerate.v</ClosedNode>
+         <ClosedNode>/test_forGenerate D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|test_forGenerate.v</ClosedNode>
+         <ClosedNode>PROJECT</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000003e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000003e0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001eb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001eb0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000000fa00000001000000000000002400000001000000000000006600000001000000000000020e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>C:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\coef_a_s1.txt</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000138000000010000000100000000000000000000000064ffffffff000000810000000000000001000001380000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Division_NR_signed_32bit_212 D:|Synchronous|Graduate Studies|Thesis|Division|Division_NR_Rec_2.1|Division_NR_Rec_2.1|Division_NR_signed_32bit_212.v</ClosedNode>
+         <ClosedNode>/IIR_mulcycle D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_mulcycle.v</ClosedNode>
+         <ClosedNode>/IIR_mulcycle_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_mulcycle_tb.v</ClosedNode>
+         <ClosedNode>/IIR_mulcycle_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_mulcycle_tb.v/uut - IIR_mulcycle</ClosedNode>
+         <ClosedNode>/IIR_normal_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_normal_tb.v/uut - IIR_normal</ClosedNode>
+         <ClosedNode>/IIR_normal_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_normal_tb.v/uut - IIR_normal/sos_Fang_2 - sos_scaled</ClosedNode>
+         <ClosedNode>/IIR_normal_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_normal_tb.v/uut - IIR_normal/sos_Fang_3 - sos_scaled</ClosedNode>
+         <ClosedNode>/IIR_normal_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_normal_tb.v/uut - IIR_normal/sos_Fang_4 - sos_scaled</ClosedNode>
+         <ClosedNode>/IIR_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_tb.v</ClosedNode>
+         <ClosedNode>/IIR_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_tb.v/uut - IIR</ClosedNode>
+         <ClosedNode>/IIR_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|IIR_tb.v/uut - IIR/sos_Fang - sos_scaled</ClosedNode>
+         <ClosedNode>/Ram_ar_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|Ram_ar_tb.v</ClosedNode>
+         <ClosedNode>/add_sub_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|add_sub_tb.v</ClosedNode>
+         <ClosedNode>/adder_float_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|adder_float_tb.v</ClosedNode>
+         <ClosedNode>/adder_float_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|adder_float_tb.v/Fang_floAdder - adder_float</ClosedNode>
+         <ClosedNode>/adder_float_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|adder_float_tb.v/Fang_uut - adder_float</ClosedNode>
+         <ClosedNode>/align_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|align_tb.v</ClosedNode>
+         <ClosedNode>/comp_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|comp_tb.v</ClosedNode>
+         <ClosedNode>/multiplier_float_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|multiplier_float_tb.v</ClosedNode>
+         <ClosedNode>/nor_cor_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|nor_cor_tb.v</ClosedNode>
+         <ClosedNode>/sos D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW5|sos.v</ClosedNode>
+         <ClosedNode>/sos_scaled_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|sos_scaled_tb.v</ClosedNode>
+         <ClosedNode>/sos_scaled_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|sos_scaled_tb.v/uut_sos_Fang - sos_scaled</ClosedNode>
+         <ClosedNode>/sos_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|sos_tb.v/uut - sos</ClosedNode>
+         <ClosedNode>/sos_tb411 D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|sos_tb411.v</ClosedNode>
+         <ClosedNode>/sos_tb411 D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|sos_tb411.v/uut_sos_Fang - sos</ClosedNode>
+         <ClosedNode>/swap_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|swap_tb.v</ClosedNode>
+         <ClosedNode>/tb_FIR_multicycle_326 D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW5|tb_FIR_multicycle_326.v/uut - FIR_multicycle_326</ClosedNode>
+         <ClosedNode>/tb_fixpoint_adder D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|tb_fixpoint_adder.v</ClosedNode>
+         <ClosedNode>/tb_sMult D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|tb_sMult.v</ClosedNode>
+         <ClosedNode>/test_forGenerate_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|test_forGenerate_tb.v</ClosedNode>
+         <ClosedNode>/test_forGenerate_tb D:|Synchronous|Graduate Studies|Homework|672|HWprojects|HW6-IIR|test_forGenerate_tb.v/uut - test_forGenerate</ClosedNode>
+         <ClosedNode>PROJECT</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>multiplier_float_tb (D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/multiplier_float_tb.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000192000000020000000000000000000000000200000064ffffffff000000810000000300000002000001920000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>multiplier_float_tb (D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/multiplier_float_tb.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013b0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b2000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001ab000000cf01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+</Project>

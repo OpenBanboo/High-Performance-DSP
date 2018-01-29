@@ -1,0 +1,37 @@
+ISim log file
+Running: P:\Syn\Graduate Studies\Homework\672\HWprojects\HW6-IIR\sos_tb411_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb P:/Syn/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_tb411_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.68d (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/mul_f0/, width 32 of formal port out is not equal to width 16 of actual signal xb0.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/mul_f1/, width 32 of formal port out is not equal to width 16 of actual signal x1b1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/mul_f2/, width 32 of formal port out is not equal to width 16 of actual signal x2b2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/add_f0/, width 32 of formal port in1 is not equal to width 16 of actual signal xb0.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/add_f0/, width 33 of formal port in2 is not equal to width 16 of actual signal x1b1x2b2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/add_f0/, width 36 of formal port out is not equal to width 16 of actual signal xb0x1b1x2b2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/add_f1/, width 32 of formal port in1 is not equal to width 16 of actual signal x1b1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/add_f1/, width 32 of formal port in2 is not equal to width 16 of actual signal x2b2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/add_f1/, width 33 of formal port out is not equal to width 16 of actual signal x1b1x2b2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 30.  For instance uut_sos_Fang/reg_b1/, width 49 of formal port d is not equal to width 51 of actual signal dout.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/reg_b1/, width 49 of formal port q is not equal to width 16 of actual signal y1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/reg_b2/, width 49 of formal port d is not equal to width 16 of actual signal y1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/reg_b2/, width 49 of formal port q is not equal to width 16 of actual signal y2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/mul_b0/, width 35 of formal port in1 is not equal to width 16 of actual signal y.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/mul_b1/, width 51 of formal port in1 is not equal to width 16 of actual signal y1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/mul_b1/, width 67 of formal port out is not equal to width 16 of actual signal y1_ma1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/mul_b2/, width 51 of formal port in1 is not equal to width 16 of actual signal y2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 40.  For instance uut_sos_Fang/mul_b2/, width 12 of formal port in2 is not equal to width 16 of actual variable a_mem. 
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/mul_b2/, width 67 of formal port out is not equal to width 16 of actual signal y2_ma2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 35.  For instance uut_sos_Fang/add_b0/, width 34 of formal port in1 is not equal to width 16 of actual signal x1b1x2b2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/add_b0/, width 67 of formal port in2 is not equal to width 16 of actual signal y2_ma2_y1_ma1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/add_b0/, width 35 of formal port out is not equal to width 16 of actual signal y.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/add_b1/, width 67 of formal port in1 is not equal to width 16 of actual signal y1_ma1.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/add_b1/, width 67 of formal port in2 is not equal to width 16 of actual signal y2_ma2.
+WARNING: File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW5/sos.v" Line 36.  For instance uut_sos_Fang/add_b1/, width 67 of formal port out is not equal to width 16 of actual signal y2_ma2_y1_ma1.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 505 ns : File "P:/Syn/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_tb411.v" Line 105

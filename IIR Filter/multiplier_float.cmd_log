@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/multiplier_float.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/multiplier_float.syr" 

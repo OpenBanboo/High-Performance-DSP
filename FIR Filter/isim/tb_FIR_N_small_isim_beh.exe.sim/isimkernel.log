@@ -1,0 +1,28 @@
+Command line:
+   tb_FIR_N_small_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  4416
+
+Wed Apr 09 10:52:12 2014
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 666.374 Meg
+
+ Total Signals          : 44
+ Total Nets             : 307
+ Total Signal Drivers   : 19
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 48
+ Total Traceable Variables  : 89
+ Total Scalar Nets and Variables : 2036
+
+ Total Simulation Time: 0.062401 sec
+
+ Current Memory Usage: 666.374 Meg
+
+Wed Apr 09 17:40:56 2014
+

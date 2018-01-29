@@ -1,0 +1,238 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx14.6\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s
+2I -n 3 -fastpaths -xml IIR.twx IIR.ncd -o IIR.twr IIR.pcf
+
+Design file:              IIR.ncd
+Physical constraint file: IIR.pcf
+Device,package,speed:     xa7a100t,csg324,I,-2I (PRELIMINARY 1.06 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+nReset      |  109.167(R)|      SLOW  |    2.350(R)|      SLOW  |CLK_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+OVF_b0<0>   |        25.091(R)|      SLOW  |         5.540(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_b0<1>   |        56.076(R)|      SLOW  |         6.013(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_b0<2>   |        85.364(R)|      SLOW  |         5.435(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_b0<3>   |       114.762(R)|      SLOW  |         5.528(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_b1<0>   |        27.385(R)|      SLOW  |         7.154(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_b1<1>   |        30.134(R)|      SLOW  |         7.930(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_b1<2>   |        29.128(R)|      SLOW  |         7.006(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_b1<3>   |        26.727(R)|      SLOW  |         6.786(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_f0<1>   |        53.598(R)|      SLOW  |         5.626(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_f0<2>   |        82.013(R)|      SLOW  |         5.148(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_f0<3>   |       112.107(R)|      SLOW  |         5.067(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_f1<1>   |        27.149(R)|      SLOW  |         7.205(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_f1<2>   |        24.225(R)|      SLOW  |         6.554(R)|      FAST  |CLK_BUFGP         |   0.000|
+OVF_f1<3>   |        23.180(R)|      SLOW  |         5.513(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<0>     |       126.014(R)|      SLOW  |         9.283(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<1>     |       128.137(R)|      SLOW  |         9.714(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<2>     |       128.013(R)|      SLOW  |         9.749(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<3>     |       127.725(R)|      SLOW  |         9.601(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<4>     |       127.510(R)|      SLOW  |         9.419(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<5>     |       128.153(R)|      SLOW  |         9.810(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<6>     |       128.468(R)|      SLOW  |         9.965(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<7>     |       127.617(R)|      SLOW  |         9.465(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<8>     |       129.562(R)|      SLOW  |        10.172(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<9>     |       128.986(R)|      SLOW  |         9.731(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<10>    |       129.847(R)|      SLOW  |        10.054(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<11>    |       129.776(R)|      SLOW  |         9.997(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<12>    |       130.018(R)|      SLOW  |        10.098(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<13>    |       130.042(R)|      SLOW  |         9.968(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<14>    |       129.962(R)|      SLOW  |         9.959(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<15>    |       129.923(R)|      SLOW  |         9.915(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<16>    |       129.992(R)|      SLOW  |        10.006(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<17>    |       129.974(R)|      SLOW  |         9.810(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<18>    |       129.487(R)|      SLOW  |         9.649(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<19>    |       129.542(R)|      SLOW  |         9.717(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<20>    |       129.525(R)|      SLOW  |         9.668(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<21>    |       130.101(R)|      SLOW  |         9.887(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<22>    |       129.572(R)|      SLOW  |         9.698(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<23>    |       129.973(R)|      SLOW  |         9.892(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<24>    |       129.908(R)|      SLOW  |         9.865(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<25>    |       131.532(R)|      SLOW  |         9.823(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<26>    |       131.814(R)|      SLOW  |         9.674(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<27>    |       132.209(R)|      SLOW  |         9.872(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<28>    |       132.264(R)|      SLOW  |         9.819(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<29>    |       132.215(R)|      SLOW  |         9.727(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<30>    |       131.753(R)|      SLOW  |         9.571(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<31>    |       131.991(R)|      SLOW  |         9.698(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<32>    |       132.346(R)|      SLOW  |         9.848(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<33>    |       132.110(R)|      SLOW  |         9.704(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<34>    |       132.080(R)|      SLOW  |         9.719(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<35>    |       131.897(R)|      SLOW  |         9.644(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<36>    |       132.335(R)|      SLOW  |         9.831(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<37>    |       131.722(R)|      SLOW  |         9.536(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<38>    |       132.193(R)|      SLOW  |         9.732(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<39>    |       132.274(R)|      SLOW  |         9.785(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<40>    |       131.925(R)|      SLOW  |         9.615(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<41>    |       132.198(R)|      SLOW  |         9.729(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<42>    |       132.875(R)|      SLOW  |         9.722(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<43>    |       132.718(R)|      SLOW  |         9.636(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<44>    |       133.088(R)|      SLOW  |         9.732(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<45>    |       133.106(R)|      SLOW  |         9.707(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<46>    |       132.762(R)|      SLOW  |         9.578(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<47>    |       133.079(R)|      SLOW  |         9.696(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<48>    |       132.877(R)|      SLOW  |         9.613(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<49>    |       133.011(R)|      SLOW  |         9.636(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<50>    |       136.176(R)|      SLOW  |        11.332(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<51>    |       135.308(R)|      SLOW  |        10.841(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<52>    |       136.180(R)|      SLOW  |        11.332(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<53>    |       135.538(R)|      SLOW  |        10.992(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<54>    |       135.933(R)|      SLOW  |        11.234(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<55>    |       135.969(R)|      SLOW  |        11.263(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<56>    |       135.510(R)|      SLOW  |        10.890(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<57>    |       135.078(R)|      SLOW  |        10.801(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<58>    |       135.567(R)|      SLOW  |        11.014(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<59>    |       135.847(R)|      SLOW  |        11.177(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<60>    |       135.329(R)|      SLOW  |        10.870(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<61>    |       135.370(R)|      SLOW  |        10.864(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<62>    |       135.601(R)|      SLOW  |        11.000(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<63>    |       135.282(R)|      SLOW  |        10.820(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<64>    |       135.760(R)|      SLOW  |        11.178(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<65>    |       135.571(R)|      SLOW  |        10.997(R)|      FAST  |CLK_BUFGP         |   0.000|
+dout<66>    |       135.737(R)|      SLOW  |        10.999(R)|      FAST  |CLK_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |  115.263|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+nReset         |OVF_b0<0>      |   18.474|
+nReset         |OVF_b0<1>      |   49.661|
+nReset         |OVF_b0<2>      |   78.949|
+nReset         |OVF_b0<3>      |  108.346|
+nReset         |OVF_b1<0>      |   17.699|
+nReset         |OVF_b1<1>      |   25.321|
+nReset         |OVF_b1<2>      |   19.482|
+nReset         |OVF_b1<3>      |   23.297|
+nReset         |OVF_f0<0>      |   15.941|
+nReset         |OVF_f0<1>      |   47.183|
+nReset         |OVF_f0<2>      |   75.598|
+nReset         |OVF_f0<3>      |  105.691|
+nReset         |OVF_f1<0>      |   17.803|
+nReset         |OVF_f1<1>      |   25.725|
+nReset         |OVF_f1<2>      |   16.745|
+nReset         |OVF_f1<3>      |   21.178|
+nReset         |dout<0>        |  119.598|
+nReset         |dout<1>        |  121.721|
+nReset         |dout<2>        |  121.597|
+nReset         |dout<3>        |  121.309|
+nReset         |dout<4>        |  121.094|
+nReset         |dout<5>        |  121.737|
+nReset         |dout<6>        |  122.052|
+nReset         |dout<7>        |  121.201|
+nReset         |dout<8>        |  123.146|
+nReset         |dout<9>        |  122.570|
+nReset         |dout<10>       |  123.431|
+nReset         |dout<11>       |  123.360|
+nReset         |dout<12>       |  123.602|
+nReset         |dout<13>       |  123.626|
+nReset         |dout<14>       |  123.546|
+nReset         |dout<15>       |  123.507|
+nReset         |dout<16>       |  123.576|
+nReset         |dout<17>       |  123.558|
+nReset         |dout<18>       |  123.071|
+nReset         |dout<19>       |  123.126|
+nReset         |dout<20>       |  123.109|
+nReset         |dout<21>       |  123.685|
+nReset         |dout<22>       |  123.156|
+nReset         |dout<23>       |  123.557|
+nReset         |dout<24>       |  123.492|
+nReset         |dout<25>       |  125.116|
+nReset         |dout<26>       |  125.398|
+nReset         |dout<27>       |  125.793|
+nReset         |dout<28>       |  125.848|
+nReset         |dout<29>       |  125.799|
+nReset         |dout<30>       |  125.337|
+nReset         |dout<31>       |  125.575|
+nReset         |dout<32>       |  125.930|
+nReset         |dout<33>       |  125.694|
+nReset         |dout<34>       |  125.664|
+nReset         |dout<35>       |  125.481|
+nReset         |dout<36>       |  125.919|
+nReset         |dout<37>       |  125.306|
+nReset         |dout<38>       |  125.777|
+nReset         |dout<39>       |  125.858|
+nReset         |dout<40>       |  125.509|
+nReset         |dout<41>       |  125.782|
+nReset         |dout<42>       |  126.459|
+nReset         |dout<43>       |  126.302|
+nReset         |dout<44>       |  126.672|
+nReset         |dout<45>       |  126.690|
+nReset         |dout<46>       |  126.346|
+nReset         |dout<47>       |  126.663|
+nReset         |dout<48>       |  126.461|
+nReset         |dout<49>       |  126.595|
+nReset         |dout<50>       |  129.760|
+nReset         |dout<51>       |  128.892|
+nReset         |dout<52>       |  129.764|
+nReset         |dout<53>       |  129.122|
+nReset         |dout<54>       |  129.517|
+nReset         |dout<55>       |  129.553|
+nReset         |dout<56>       |  129.094|
+nReset         |dout<57>       |  128.662|
+nReset         |dout<58>       |  129.151|
+nReset         |dout<59>       |  129.431|
+nReset         |dout<60>       |  128.913|
+nReset         |dout<61>       |  128.954|
+nReset         |dout<62>       |  129.185|
+nReset         |dout<63>       |  128.866|
+nReset         |dout<64>       |  129.344|
+nReset         |dout<65>       |  129.155|
+nReset         |dout<66>       |  129.321|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Apr 14 16:01:13 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 1068 MB
+
+
+

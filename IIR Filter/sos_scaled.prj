@@ -1,0 +1,4 @@
+verilog work "sMult.v"
+verilog work "register.v"
+verilog work "fixpoint_adder.v"
+verilog work "sos_scaled.v"

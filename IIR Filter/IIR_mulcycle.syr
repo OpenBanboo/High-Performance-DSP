@@ -1,0 +1,1446 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: IIR_mulcycle.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "IIR_mulcycle.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "IIR_mulcycle"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : IIR_mulcycle
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\sMult.v" into library work
+Parsing module <sMult>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\RAM_ar.v" into library work
+Parsing module <RAM_ar>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\multiplexer.v" into library work
+Parsing module <multiplexer>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\fixpoint_adder.v" into library work
+WARNING:HDLCompiler:572 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\fixpoint_adder.v" Line 2: Macro <X_trc> is redefined.
+Parsing module <fixpoint_adder>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\IIR_mulcycle.v" into library work
+WARNING:HDLCompiler:572 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\IIR_mulcycle.v" Line 2: Macro <X_trc> is redefined.
+Parsing module <IIR_mulcycle>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <IIR_mulcycle>.
+
+Elaborating module <sMult(WI1=5,WF1=11,WI2=5,WF2=11,WIO=10,WFO=22)>.
+
+Elaborating module <multiplexer(N=67)>.
+
+Elaborating module <RAM_ar(eleNum=4,dataWidth=67)>.
+
+Elaborating module <sMult(WI1=23,WF1=44,WI2=5,WF2=11,WIO=28,WFO=55)>.
+
+Elaborating module <fixpoint_adder(WI1=28,WF1=55,WI2=29,WF2=55,WIO=30,WFO=55)>.
+
+Elaborating module <fixpoint_adder(WI1=28,WF1=55,WI2=28,WF2=55,WIO=29,WFO=55)>.
+
+Elaborating module <RAM_ar(eleNum=4,dataWidth=102)>.
+
+Elaborating module <sMult(WI1=31,WF1=55,WI2=5,WF2=11,WIO=36,WFO=66)>.
+
+Elaborating module <sMult(WI1=36,WF1=66,WI2=5,WF2=11,WIO=41,WFO=77)>.
+
+Elaborating module <fixpoint_adder(WI1=30,WF1=55,WI2=42,WF2=77,WIO=31,WFO=55)>.
+
+Elaborating module <fixpoint_adder(WI1=41,WF1=77,WI2=41,WF2=77,WIO=42,WFO=77)>.
+
+Elaborating module <sMult(WI1=36,WF1=66,WI2=5,WF2=11,WIO=23,WFO=44)>.
+WARNING:HDLCompiler:189 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\IIR_mulcycle.v" Line 182: Size mismatch in connection of port <out>. Formal port size is 67-bit while actual signal size is 118-bit.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\IIR_mulcycle.v" Line 186: Result of 118-bit expression is truncated to fit in 67-bit target.
+WARNING:HDLCompiler:634 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\IIR_mulcycle.v" Line 83: Net <scale_mem[4][15]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <IIR_mulcycle>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\IIR_mulcycle.v".
+        NUMBER = 4
+        TAPSIZE = 3
+        WI = 5
+        WF = 11
+        WIO = 23
+        WFO = 44
+        WIS = 5
+        WFS = 11
+WARNING:Xst:653 - Signal <scale_mem<4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <scale_mem<3>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <scale_mem<2>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <scale_mem<1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <scale_mem<0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <coef_mem> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <pointer>.
+    Found 67-bit register for signal <dout>.
+    Found 67-bit register for signal <tmp_result>.
+    Found 1-bit register for signal <Sel>.
+    Found 32-bit adder for signal <pointer[31]_GND_1_o_add_5_OUT> created at line 121.
+    Found 32-bit adder for signal <n0064> created at line 143.
+    Found 32-bit adder for signal <n0066> created at line 146.
+    Found 32-bit adder for signal <n0068> created at line 165.
+    Found 32-bit adder for signal <n0070> created at line 168.
+    Found 32-bit adder for signal <n0072> created at line 171.
+    Found 32x3-bit multiplier for signal <n0062> created at line 140.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <coef_mem>, simulation mismatch.
+    Found 24x16-bit dual-port Read Only RAM <Mram_coef_mem> for signal <coef_mem>.
+    Summary:
+	inferred   3 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred 167 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <IIR_mulcycle> synthesized.
+
+Synthesizing Unit <sMult_1>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\sMult.v".
+        WI1 = 5
+        WF1 = 11
+        WI2 = 5
+        WF2 = 11
+        WIO = 10
+        WFO = 22
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16x16-bit multiplier for signal <tmp> created at line 29.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Multiplexer(s).
+Unit <sMult_1> synthesized.
+
+Synthesizing Unit <multiplexer>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\multiplexer.v".
+        N = 67
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <multiplexer> synthesized.
+
+Synthesizing Unit <RAM_ar_1>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\RAM_ar.v".
+        eleNum = 4
+        dataWidth = 67
+    Found 268-bit register for signal <n0013[267:0]>.
+    Found 67-bit 4-to-1 multiplexer for signal <dout> created at line 44.
+    Summary:
+	inferred 268 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <RAM_ar_1> synthesized.
+
+Synthesizing Unit <sMult_2>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\sMult.v".
+        WI1 = 23
+        WF1 = 44
+        WI2 = 5
+        WF2 = 11
+        WIO = 28
+        WFO = 55
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 67x16-bit multiplier for signal <tmp> created at line 29.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Multiplexer(s).
+Unit <sMult_2> synthesized.
+
+Synthesizing Unit <fixpoint_adder_1>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\fixpoint_adder.v".
+        WI1 = 28
+        WF1 = 55
+        WI2 = 29
+        WF2 = 55
+        WIO = 30
+        WFO = 55
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 84-bit adder for signal <tmp> created at line 53.
+    Found 1-bit comparator equal for signal <in1[82]_in2[83]_equal_7_o> created at line 89
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <fixpoint_adder_1> synthesized.
+
+Synthesizing Unit <fixpoint_adder_2>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\fixpoint_adder.v".
+        WI1 = 28
+        WF1 = 55
+        WI2 = 28
+        WF2 = 55
+        WIO = 29
+        WFO = 55
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 83-bit adder for signal <tmp> created at line 53.
+    Found 1-bit comparator equal for signal <in1[82]_in2[82]_equal_7_o> created at line 89
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <fixpoint_adder_2> synthesized.
+
+Synthesizing Unit <RAM_ar_2>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\RAM_ar.v".
+        eleNum = 4
+        dataWidth = 102
+    Found 408-bit register for signal <n0013[407:0]>.
+    Found 102-bit 4-to-1 multiplexer for signal <dout> created at line 44.
+    Summary:
+	inferred 408 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <RAM_ar_2> synthesized.
+
+Synthesizing Unit <sMult_3>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\sMult.v".
+        WI1 = 31
+        WF1 = 55
+        WI2 = 5
+        WF2 = 11
+        WIO = 36
+        WFO = 66
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 86x16-bit multiplier for signal <tmp> created at line 29.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Multiplexer(s).
+Unit <sMult_3> synthesized.
+
+Synthesizing Unit <sMult_4>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\sMult.v".
+        WI1 = 36
+        WF1 = 66
+        WI2 = 5
+        WF2 = 11
+        WIO = 41
+        WFO = 77
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 102x16-bit multiplier for signal <tmp> created at line 29.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Multiplexer(s).
+Unit <sMult_4> synthesized.
+
+Synthesizing Unit <fixpoint_adder_3>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\fixpoint_adder.v".
+        WI1 = 30
+        WF1 = 55
+        WI2 = 42
+        WF2 = 77
+        WIO = 31
+        WFO = 55
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 119-bit adder for signal <tmp> created at line 53.
+    Found 1-bit comparator equal for signal <in1[84]_in2[118]_equal_7_o> created at line 89
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <fixpoint_adder_3> synthesized.
+
+Synthesizing Unit <fixpoint_adder_4>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\fixpoint_adder.v".
+        WI1 = 41
+        WF1 = 77
+        WI2 = 41
+        WF2 = 77
+        WIO = 42
+        WFO = 77
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 118-bit adder for signal <tmp> created at line 53.
+    Found 1-bit comparator equal for signal <in1[117]_in2[117]_equal_7_o> created at line 89
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <fixpoint_adder_4> synthesized.
+
+Synthesizing Unit <sMult_5>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW6-IIR\sMult.v".
+        WI1 = 36
+        WF1 = 66
+        WI2 = 5
+        WF2 = 11
+        WIO = 23
+        WFO = 44
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 102x16-bit multiplier for signal <tmp> created at line 29.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Multiplexer(s).
+Unit <sMult_5> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 24x16-bit dual-port Read Only RAM                     : 3
+# Multipliers                                          : 9
+ 102x16-bit multiplier                                 : 3
+ 16x16-bit multiplier                                  : 1
+ 32x3-bit multiplier                                   : 1
+ 67x16-bit multiplier                                  : 3
+ 86x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 10
+ 118-bit adder                                         : 1
+ 119-bit adder                                         : 1
+ 32-bit adder                                          : 6
+ 83-bit adder                                          : 1
+ 84-bit adder                                          : 1
+# Registers                                            : 8
+ 1-bit register                                        : 1
+ 268-bit register                                      : 2
+ 32-bit register                                       : 1
+ 408-bit register                                      : 2
+ 67-bit register                                       : 2
+# Comparators                                          : 4
+ 1-bit comparator equal                                : 4
+# Multiplexers                                         : 41
+ 1-bit 2-to-1 multiplexer                              : 7
+ 102-bit 2-to-1 multiplexer                            : 9
+ 102-bit 4-to-1 multiplexer                            : 2
+ 118-bit 2-to-1 multiplexer                            : 2
+ 119-bit 2-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 67-bit 2-to-1 multiplexer                             : 10
+ 67-bit 4-to-1 multiplexer                             : 2
+ 83-bit 2-to-1 multiplexer                             : 3
+ 84-bit 2-to-1 multiplexer                             : 1
+ 85-bit 2-to-1 multiplexer                             : 1
+ 86-bit 2-to-1 multiplexer                             : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\Xilinx14.6\14.6\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\Xilinx14.6\14.6\ISE_DS\ISE\.
+
+Synthesizing (advanced) Unit <IIR_mulcycle>.
+The following registers are absorbed into counter <pointer>: 1 register on signal <pointer>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_coef_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 24-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(n0062,"0")>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 24-word x 16-bit                    |          |
+    |     addrB          | connected to signal <n0064>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_coef_mem1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 24-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0066>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 24-word x 16-bit                    |          |
+    |     addrB          | connected to signal <n0068>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_coef_mem2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 24-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0070>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 24-word x 16-bit                    |          |
+    |     addrB          | connected to signal <n0072>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <IIR_mulcycle> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 24x16-bit dual-port distributed Read Only RAM         : 3
+# Multipliers                                          : 9
+ 102x16-bit multiplier                                 : 3
+ 16x2-bit multiplier                                   : 1
+ 32x3-bit multiplier                                   : 1
+ 67x16-bit multiplier                                  : 3
+ 86x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 9
+ 118-bit adder                                         : 1
+ 119-bit adder                                         : 1
+ 5-bit adder                                           : 5
+ 83-bit adder                                          : 1
+ 84-bit adder                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1487
+ Flip-Flops                                            : 1487
+# Comparators                                          : 4
+ 1-bit comparator equal                                : 4
+# Multiplexers                                         : 1710
+ 1-bit 2-to-1 multiplexer                              : 1359
+ 1-bit 4-to-1 multiplexer                              : 338
+ 102-bit 2-to-1 multiplexer                            : 1
+ 118-bit 2-to-1 multiplexer                            : 2
+ 119-bit 2-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 67-bit 2-to-1 multiplexer                             : 2
+ 83-bit 2-to-1 multiplexer                             : 3
+ 84-bit 2-to-1 multiplexer                             : 1
+ 85-bit 2-to-1 multiplexer                             : 1
+ 86-bit 2-to-1 multiplexer                             : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <tmp_result_51> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <tmp_result_52> <tmp_result_53> <tmp_result_54> <tmp_result_55> <tmp_result_56> <tmp_result_57> <tmp_result_58> <tmp_result_59> <tmp_result_60> <tmp_result_61> <tmp_result_62> <tmp_result_63> <tmp_result_64> <tmp_result_65> <tmp_result_66> 
+INFO:Xst:2261 - The FF/Latch <dout_51> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <dout_52> <dout_53> <dout_54> <dout_55> <dout_56> <dout_57> <dout_58> <dout_59> <dout_60> <dout_61> <dout_62> <dout_63> <dout_64> <dout_65> <dout_66> 
+
+Optimizing unit <IIR_mulcycle> ...
+
+Optimizing unit <RAM_ar_1> ...
+
+Optimizing unit <fixpoint_adder_1> ...
+
+Optimizing unit <fixpoint_adder_2> ...
+
+Optimizing unit <RAM_ar_2> ...
+
+Optimizing unit <fixpoint_adder_4> ...
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem5> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem8> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem7> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem9> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem10> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem11> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem12> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem15> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem13> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem14> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem16> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem17> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem3>, <Mram_coef_mem18> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem112> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem110> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem111> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem113> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem114> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem115> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem116> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem119> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem117> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem118> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem120> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem121> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem122> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem123> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem19>, <Mram_coef_mem124> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem21> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem23> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem24> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem25> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem26> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem29> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem27> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem28> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem210> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem211> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem212> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem213> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem216> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem214> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_coef_mem22>, <Mram_coef_mem215> are equivalent, second RAM is removed
+WARNING:Xst:1293 - FF/Latch <pointer_31> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_30> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_29> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_28> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_27> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_26> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_25> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_24> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_23> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_22> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_21> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_20> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_19> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_18> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_17> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_16> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_15> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_14> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_13> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_12> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_11> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_10> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_9> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_8> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_7> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_6> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_5> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_4> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_3> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pointer_2> has a constant value of 0 in block <IIR_mulcycle>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b2/RAM_0_203> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b2/RAM_0_202> <RAM_reg_b2/RAM_0_201> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f2/RAM_0_267> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f2/RAM_0_266> <RAM_reg_f2/RAM_0_265> <RAM_reg_f2/RAM_0_264> <RAM_reg_f2/RAM_0_263> <RAM_reg_f2/RAM_0_262> <RAM_reg_f2/RAM_0_261> <RAM_reg_f2/RAM_0_260> <RAM_reg_f2/RAM_0_259> <RAM_reg_f2/RAM_0_258> <RAM_reg_f2/RAM_0_257> <RAM_reg_f2/RAM_0_256> <RAM_reg_f2/RAM_0_255> <RAM_reg_f2/RAM_0_254> <RAM_reg_f2/RAM_0_253> <RAM_reg_f2/RAM_0_252> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b1/RAM_0_305> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b1/RAM_0_304> <RAM_reg_b1/RAM_0_303> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b2/RAM_0_305> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b2/RAM_0_304> <RAM_reg_b2/RAM_0_303> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b1/RAM_0_407> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b1/RAM_0_406> <RAM_reg_b1/RAM_0_405> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b2/RAM_0_407> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b2/RAM_0_406> <RAM_reg_b2/RAM_0_405> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f2/RAM_0_66> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f2/RAM_0_65> <RAM_reg_f2/RAM_0_64> <RAM_reg_f2/RAM_0_63> <RAM_reg_f2/RAM_0_62> <RAM_reg_f2/RAM_0_61> <RAM_reg_f2/RAM_0_60> <RAM_reg_f2/RAM_0_59> <RAM_reg_f2/RAM_0_58> <RAM_reg_f2/RAM_0_57> <RAM_reg_f2/RAM_0_56> <RAM_reg_f2/RAM_0_55> <RAM_reg_f2/RAM_0_54> <RAM_reg_f2/RAM_0_53> <RAM_reg_f2/RAM_0_52> <RAM_reg_f2/RAM_0_51> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f1/RAM_0_133> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f1/RAM_0_132> <RAM_reg_f1/RAM_0_131> <RAM_reg_f1/RAM_0_130> <RAM_reg_f1/RAM_0_129> <RAM_reg_f1/RAM_0_128> <RAM_reg_f1/RAM_0_127> <RAM_reg_f1/RAM_0_126> <RAM_reg_f1/RAM_0_125> <RAM_reg_f1/RAM_0_124> <RAM_reg_f1/RAM_0_123> <RAM_reg_f1/RAM_0_122> <RAM_reg_f1/RAM_0_121> <RAM_reg_f1/RAM_0_120> <RAM_reg_f1/RAM_0_119> <RAM_reg_f1/RAM_0_118> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f1/RAM_0_200> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f1/RAM_0_199> <RAM_reg_f1/RAM_0_198> <RAM_reg_f1/RAM_0_197> <RAM_reg_f1/RAM_0_196> <RAM_reg_f1/RAM_0_195> <RAM_reg_f1/RAM_0_194> <RAM_reg_f1/RAM_0_193> <RAM_reg_f1/RAM_0_192> <RAM_reg_f1/RAM_0_191> <RAM_reg_f1/RAM_0_190> <RAM_reg_f1/RAM_0_189> <RAM_reg_f1/RAM_0_188> <RAM_reg_f1/RAM_0_187> <RAM_reg_f1/RAM_0_186> <RAM_reg_f1/RAM_0_185> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b1/RAM_0_101> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b1/RAM_0_100> <RAM_reg_b1/RAM_0_99> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f2/RAM_0_133> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f2/RAM_0_132> <RAM_reg_f2/RAM_0_131> <RAM_reg_f2/RAM_0_130> <RAM_reg_f2/RAM_0_129> <RAM_reg_f2/RAM_0_128> <RAM_reg_f2/RAM_0_127> <RAM_reg_f2/RAM_0_126> <RAM_reg_f2/RAM_0_125> <RAM_reg_f2/RAM_0_124> <RAM_reg_f2/RAM_0_123> <RAM_reg_f2/RAM_0_122> <RAM_reg_f2/RAM_0_121> <RAM_reg_f2/RAM_0_120> <RAM_reg_f2/RAM_0_119> <RAM_reg_f2/RAM_0_118> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f2/RAM_0_200> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f2/RAM_0_199> <RAM_reg_f2/RAM_0_198> <RAM_reg_f2/RAM_0_197> <RAM_reg_f2/RAM_0_196> <RAM_reg_f2/RAM_0_195> <RAM_reg_f2/RAM_0_194> <RAM_reg_f2/RAM_0_193> <RAM_reg_f2/RAM_0_192> <RAM_reg_f2/RAM_0_191> <RAM_reg_f2/RAM_0_190> <RAM_reg_f2/RAM_0_189> <RAM_reg_f2/RAM_0_188> <RAM_reg_f2/RAM_0_187> <RAM_reg_f2/RAM_0_186> <RAM_reg_f2/RAM_0_185> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b2/RAM_0_101> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b2/RAM_0_100> <RAM_reg_b2/RAM_0_99> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f1/RAM_0_66> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f1/RAM_0_65> <RAM_reg_f1/RAM_0_64> <RAM_reg_f1/RAM_0_63> <RAM_reg_f1/RAM_0_62> <RAM_reg_f1/RAM_0_61> <RAM_reg_f1/RAM_0_60> <RAM_reg_f1/RAM_0_59> <RAM_reg_f1/RAM_0_58> <RAM_reg_f1/RAM_0_57> <RAM_reg_f1/RAM_0_56> <RAM_reg_f1/RAM_0_55> <RAM_reg_f1/RAM_0_54> <RAM_reg_f1/RAM_0_53> <RAM_reg_f1/RAM_0_52> <RAM_reg_f1/RAM_0_51> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_b1/RAM_0_203> in Unit <IIR_mulcycle> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_reg_b1/RAM_0_202> <RAM_reg_b1/RAM_0_201> 
+INFO:Xst:2261 - The FF/Latch <RAM_reg_f1/RAM_0_267> in Unit <IIR_mulcycle> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_reg_f1/RAM_0_266> <RAM_reg_f1/RAM_0_265> <RAM_reg_f1/RAM_0_264> <RAM_reg_f1/RAM_0_263> <RAM_reg_f1/RAM_0_262> <RAM_reg_f1/RAM_0_261> <RAM_reg_f1/RAM_0_260> <RAM_reg_f1/RAM_0_259> <RAM_reg_f1/RAM_0_258> <RAM_reg_f1/RAM_0_257> <RAM_reg_f1/RAM_0_256> <RAM_reg_f1/RAM_0_255> <RAM_reg_f1/RAM_0_254> <RAM_reg_f1/RAM_0_253> <RAM_reg_f1/RAM_0_252> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block IIR_mulcycle, actual ratio is 7.
+FlipFlop pointer_0 has been replicated 1 time(s)
+FlipFlop pointer_1 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1326
+ Flip-Flops                                            : 1326
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : IIR_mulcycle.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5263
+#      GND                         : 1
+#      INV                         : 14
+#      LUT1                        : 7
+#      LUT2                        : 1212
+#      LUT3                        : 435
+#      LUT4                        : 644
+#      LUT5                        : 610
+#      LUT6                        : 307
+#      MUXCY                       : 1022
+#      VCC                         : 1
+#      XORCY                       : 1010
+# FlipFlops/Latches                : 1326
+#      FD                          : 52
+#      FDE                         : 52
+#      FDR                         : 6
+#      FDRE                        : 1216
+# RAMS                             : 3
+#      RAM32X1D                    : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 75
+#      IBUF                        : 4
+#      OBUF                        : 71
+# DSPs                             : 49
+#      DSP48E1                     : 49
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1326  out of  126800     1%  
+ Number of Slice LUTs:                 3235  out of  63400     5%  
+    Number used as Logic:              3229  out of  63400     5%  
+    Number used as Memory:                6  out of  19000     0%  
+       Number used as RAM:                6
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3274
+   Number with an unused Flip Flop:    1948  out of   3274    59%  
+   Number with an unused LUT:            39  out of   3274     1%  
+   Number of fully used LUT-FF pairs:  1287  out of   3274    39%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          91
+ Number of bonded IOBs:                  75  out of    210    35%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of DSP48E1s:                     49  out of    240    20%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------+------------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)        | Load  |
+---------------------------------------+------------------------------+-------+
+CLK                                    | IBUF+BUFG                    | 110   |
+mul_f2/Mmult_tmp_submult_2_Madd_lut<16>| NONE(Mram_coef_mem3)         | 3     |
+CLK_g(CLK_g1:O)                        | BUFG(*)(RAM_reg_f2/RAM_0_267)| 1216  |
+---------------------------------------+------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 34.118ns (Maximum Frequency: 29.310MHz)
+   Minimum input arrival time before clock: 24.415ns
+   Maximum output required time after clock: 20.397ns
+   Maximum combinational path delay: 8.333ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 34.118ns (frequency: 29.310MHz)
+  Total number of paths / destination ports: 5568923877916387800000000 / 167
+-------------------------------------------------------------------------
+Delay:               34.118ns (Levels of Logic = 60)
+  Source:            pointer_0_1 (FF)
+  Destination:       tmp_result_51 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: pointer_0_1 to tmp_result_51
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.361   0.344  pointer_0_1 (pointer_0_1)
+     INV:I->O              1   0.113   0.000  Mmult_n0062_Madd_lut<0>_INV_0 (Mmult_n0062_Madd_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mmult_n0062_Madd_cy<0> (Mmult_n0062_Madd_cy<0>)
+     XORCY:CI->O           1   0.370   0.339  Mmult_n0062_Madd_xor<1> (Mmult_n0062_Madd_1)
+     INV:I->O              1   0.113   0.000  Mmult_n0062_Madd1_lut<1>_INV_0 (Mmult_n0062_Madd1_lut<1>)
+     MUXCY:S->O            1   0.353   0.000  Mmult_n0062_Madd1_cy<1> (Mmult_n0062_Madd1_cy<1>)
+     XORCY:CI->O           6   0.370   0.467  Mmult_n0062_Madd1_xor<2> (Madd_n0066_Madd_lut<3>)
+     LUT3:I1->O            2   0.097   0.344  n0070<4>1 (n0070<4>)
+     RAM32X1D:DPRA4->DPO  158   0.097   0.492  Mram_coef_mem22 (pointer[31]_read_port_30_OUT<1>)
+     DSP48E1:B1->PCOUT47    1   3.244   0.000  mul_b2/Mmult_tmp_submult_0 (mul_b2/Mmult_tmp_submult_0_PCOUT_to_mul_b2/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b2/Mmult_tmp_submult_01 (mul_b2/Mmult_tmp_submult_01_PCOUT_to_mul_b2/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b2/Mmult_tmp_submult_02 (mul_b2/Mmult_tmp_submult_02_PCOUT_to_mul_b2/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.271   0.439  mul_b2/Mmult_tmp_submult_03 (mul_b2/Mmult_tmp_submult_0_34)
+     LUT3:I1->O            1   0.097   0.000  add_b1/Madd_tmp_lut<34> (add_b1/Madd_tmp_lut<34>)
+     MUXCY:S->O            1   0.353   0.000  add_b1/Madd_tmp_cy<34> (add_b1/Madd_tmp_cy<34>)
+     MUXCY:CI->O           1   0.023   0.000  add_b1/Madd_tmp_cy<35> (add_b1/Madd_tmp_cy<35>)
+     MUXCY:CI->O           1   0.023   0.000  add_b1/Madd_tmp_cy<36> (add_b1/Madd_tmp_cy<36>)
+     XORCY:CI->O           1   0.370   0.355  add_b1/Madd_tmp_xor<37> (add_b1/tmp<37>)
+     LUT3:I2->O            1   0.097   0.000  add_b0/Madd_tmp_lut<37> (add_b0/Madd_tmp_lut<37>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<37> (add_b0/Madd_tmp_cy<37>)
+     XORCY:CI->O           1   0.370   0.355  add_b0/Madd_tmp_xor<38> (add_b0/tmp<38>)
+     LUT2:I1->O            1   0.097   0.339  add_b0/Mmux_out82 (y<16>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_b0/Mmult_tmp_submult_0 (mul_b0/Mmult_tmp_submult_0_PCOUT_to_mul_b0/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_01 (mul_b0/Mmult_tmp_submult_01_PCOUT_to_mul_b0/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_02 (mul_b0/Mmult_tmp_submult_02_PCOUT_to_mul_b0/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P7    1   1.271   0.355  mul_b0/Mmult_tmp_submult_03 (mul_b0/Mmult_tmp_submult_0_41)
+     LUT2:I1->O            1   0.097   0.000  mul_b0/Mmult_tmp1_Madd_lut<41> (mul_b0/Mmult_tmp1_Madd_lut<41>)
+     MUXCY:S->O            1   0.353   0.000  mul_b0/Mmult_tmp1_Madd_cy<41> (mul_b0/Mmult_tmp1_Madd_cy<41>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<42> (mul_b0/Mmult_tmp1_Madd_cy<42>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<43> (mul_b0/Mmult_tmp1_Madd_cy<43>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<44> (mul_b0/Mmult_tmp1_Madd_cy<44>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<45> (mul_b0/Mmult_tmp1_Madd_cy<45>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<46> (mul_b0/Mmult_tmp1_Madd_cy<46>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<47> (mul_b0/Mmult_tmp1_Madd_cy<47>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<48> (mul_b0/Mmult_tmp1_Madd_cy<48>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<49> (mul_b0/Mmult_tmp1_Madd_cy<49>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<50> (mul_b0/Mmult_tmp1_Madd_cy<50>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<51> (mul_b0/Mmult_tmp1_Madd_cy<51>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<52> (mul_b0/Mmult_tmp1_Madd_cy<52>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<53> (mul_b0/Mmult_tmp1_Madd_cy<53>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<54> (mul_b0/Mmult_tmp1_Madd_cy<54>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<55> (mul_b0/Mmult_tmp1_Madd_cy<55>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<56> (mul_b0/Mmult_tmp1_Madd_cy<56>)
+     XORCY:CI->O           5   0.370   0.378  mul_b0/Mmult_tmp1_Madd_xor<57> (mul_b0/tmp<57>)
+     LUT2:I1->O            1   0.097   0.339  mul_b0/Mmux_out551 (tmp<57>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_scale/Mmult_tmp_submult_1 (mul_scale/Mmult_tmp_submult_1_PCOUT_to_mul_scale/Mmult_tmp_submult_11_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_scale/Mmult_tmp_submult_11 (mul_scale/Mmult_tmp_submult_11_PCOUT_to_mul_scale/Mmult_tmp_submult_12_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_scale/Mmult_tmp_submult_12 (mul_scale/Mmult_tmp_submult_12_PCOUT_to_mul_scale/Mmult_tmp_submult_13_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.271   0.355  mul_scale/Mmult_tmp_submult_13 (mul_scale/Mmult_tmp_submult_1_34)
+     LUT2:I1->O            1   0.097   0.000  mul_scale/Mmult_tmp1_Madd_lut<75> (mul_scale/Mmult_tmp1_Madd_lut<75>)
+     MUXCY:S->O            1   0.353   0.000  mul_scale/Mmult_tmp1_Madd_cy<75> (mul_scale/Mmult_tmp1_Madd_cy<75>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<76> (mul_scale/Mmult_tmp1_Madd_cy<76>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<77> (mul_scale/Mmult_tmp1_Madd_cy<77>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<78> (mul_scale/Mmult_tmp1_Madd_cy<78>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<79> (mul_scale/Mmult_tmp1_Madd_cy<79>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<80> (mul_scale/Mmult_tmp1_Madd_cy<80>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<81> (mul_scale/Mmult_tmp1_Madd_cy<81>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<82> (mul_scale/Mmult_tmp1_Madd_cy<82>)
+     MUXCY:CI->O           0   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<83> (mul_scale/Mmult_tmp1_Madd_cy<83>)
+     XORCY:CI->O           1   0.370   0.355  mul_scale/Mmult_tmp1_Madd_xor<84> (mul_scale/tmp<84>)
+     LUT2:I1->O            1   0.097   0.000  n0052[66:0]<51>1 (n0052[66:0]<51>)
+     FD:D                      0.008          tmp_result_51
+    ----------------------------------------
+    Total                     34.118ns (28.860ns logic, 5.258ns route)
+                                       (84.6% logic, 15.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_g'
+  Clock period: 24.740ns (frequency: 40.421MHz)
+  Total number of paths / destination ports: 1157703719015250100000 / 1216
+-------------------------------------------------------------------------
+Delay:               24.740ns (Levels of Logic = 63)
+  Source:            RAM_reg_f1/RAM_0_16 (FF)
+  Destination:       RAM_reg_b1/RAM_0_407 (FF)
+  Source Clock:      CLK_g rising
+  Destination Clock: CLK_g rising
+
+  Data Path: RAM_reg_f1/RAM_0_16 to RAM_reg_b1/RAM_0_407
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.361   0.765  RAM_reg_f1/RAM_0_16 (RAM_reg_f1/RAM_0_16)
+     LUT6:I0->O            1   0.097   0.339  RAM_reg_f1/mux27511 (x1<16>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_f1/Mmult_tmp_submult_0 (mul_f1/Mmult_tmp_submult_0_PCOUT_to_mul_f1/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f1/Mmult_tmp_submult_01 (mul_f1/Mmult_tmp_submult_01_PCOUT_to_mul_f1/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f1/Mmult_tmp_submult_02 (mul_f1/Mmult_tmp_submult_02_PCOUT_to_mul_f1/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P7    1   1.271   0.355  mul_f1/Mmult_tmp_submult_03 (mul_f1/Mmult_tmp_submult_0_41)
+     LUT2:I1->O            1   0.097   0.000  mul_f1/Mmult_tmp1_Madd_lut<41> (mul_f1/Mmult_tmp1_Madd_lut<41>)
+     MUXCY:S->O            1   0.353   0.000  mul_f1/Mmult_tmp1_Madd_cy<41> (mul_f1/Mmult_tmp1_Madd_cy<41>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<42> (mul_f1/Mmult_tmp1_Madd_cy<42>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<43> (mul_f1/Mmult_tmp1_Madd_cy<43>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<44> (mul_f1/Mmult_tmp1_Madd_cy<44>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<45> (mul_f1/Mmult_tmp1_Madd_cy<45>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<46> (mul_f1/Mmult_tmp1_Madd_cy<46>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<47> (mul_f1/Mmult_tmp1_Madd_cy<47>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<48> (mul_f1/Mmult_tmp1_Madd_cy<48>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<49> (mul_f1/Mmult_tmp1_Madd_cy<49>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<50> (mul_f1/Mmult_tmp1_Madd_cy<50>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<51> (mul_f1/Mmult_tmp1_Madd_cy<51>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<52> (mul_f1/Mmult_tmp1_Madd_cy<52>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp1_Madd_cy<53> (mul_f1/Mmult_tmp1_Madd_cy<53>)
+     XORCY:CI->O           2   0.370   0.444  mul_f1/Mmult_tmp1_Madd_xor<54> (mul_f1/tmp<54>)
+     LUT3:I1->O            1   0.097   0.000  add_f1/Madd_tmp_lut<54> (add_f1/Madd_tmp_lut<54>)
+     MUXCY:S->O            1   0.353   0.000  add_f1/Madd_tmp_cy<54> (add_f1/Madd_tmp_cy<54>)
+     XORCY:CI->O           1   0.370   0.355  add_f1/Madd_tmp_xor<55> (add_f1/tmp<55>)
+     LUT3:I2->O            1   0.097   0.000  add_f0/Madd_tmp_lut<55> (add_f0/Madd_tmp_lut<55>)
+     MUXCY:S->O            1   0.353   0.000  add_f0/Madd_tmp_cy<55> (add_f0/Madd_tmp_cy<55>)
+     XORCY:CI->O           2   0.370   0.360  add_f0/Madd_tmp_xor<56> (add_f0/tmp<56>)
+     LUT3:I2->O            1   0.097   0.000  add_b0/Madd_tmp_lut<78> (add_b0/Madd_tmp_lut<78>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<78> (add_b0/Madd_tmp_cy<78>)
+     XORCY:CI->O           1   0.370   0.355  add_b0/Madd_tmp_xor<79> (add_b0/tmp<79>)
+     LUT2:I1->O            1   0.097   0.339  add_b0/Mmux_out531 (y<57>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_b0/Mmult_tmp_submult_1 (mul_b0/Mmult_tmp_submult_1_PCOUT_to_mul_b0/Mmult_tmp_submult_11_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_11 (mul_b0/Mmult_tmp_submult_11_PCOUT_to_mul_b0/Mmult_tmp_submult_12_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_12 (mul_b0/Mmult_tmp_submult_12_PCOUT_to_mul_b0/Mmult_tmp_submult_13_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.271   0.355  mul_b0/Mmult_tmp_submult_13 (mul_b0/Mmult_tmp_submult_1_34)
+     LUT2:I1->O            1   0.097   0.000  mul_b0/Mmult_tmp1_Madd_lut<75> (mul_b0/Mmult_tmp1_Madd_lut<75>)
+     MUXCY:S->O            1   0.353   0.000  mul_b0/Mmult_tmp1_Madd_cy<75> (mul_b0/Mmult_tmp1_Madd_cy<75>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<76> (mul_b0/Mmult_tmp1_Madd_cy<76>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<77> (mul_b0/Mmult_tmp1_Madd_cy<77>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<78> (mul_b0/Mmult_tmp1_Madd_cy<78>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<79> (mul_b0/Mmult_tmp1_Madd_cy<79>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<80> (mul_b0/Mmult_tmp1_Madd_cy<80>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<81> (mul_b0/Mmult_tmp1_Madd_cy<81>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<82> (mul_b0/Mmult_tmp1_Madd_cy<82>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<83> (mul_b0/Mmult_tmp1_Madd_cy<83>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<84> (mul_b0/Mmult_tmp1_Madd_cy<84>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<85> (mul_b0/Mmult_tmp1_Madd_cy<85>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<86> (mul_b0/Mmult_tmp1_Madd_cy<86>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<87> (mul_b0/Mmult_tmp1_Madd_cy<87>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<88> (mul_b0/Mmult_tmp1_Madd_cy<88>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<89> (mul_b0/Mmult_tmp1_Madd_cy<89>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<90> (mul_b0/Mmult_tmp1_Madd_cy<90>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<91> (mul_b0/Mmult_tmp1_Madd_cy<91>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<92> (mul_b0/Mmult_tmp1_Madd_cy<92>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<93> (mul_b0/Mmult_tmp1_Madd_cy<93>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<94> (mul_b0/Mmult_tmp1_Madd_cy<94>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<95> (mul_b0/Mmult_tmp1_Madd_cy<95>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<96> (mul_b0/Mmult_tmp1_Madd_cy<96>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<97> (mul_b0/Mmult_tmp1_Madd_cy<97>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<98> (mul_b0/Mmult_tmp1_Madd_cy<98>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<99> (mul_b0/Mmult_tmp1_Madd_cy<99>)
+     MUXCY:CI->O           0   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<100> (mul_b0/Mmult_tmp1_Madd_cy<100>)
+     XORCY:CI->O           4   0.370   0.372  mul_b0/Mmult_tmp1_Madd_xor<101> (mul_b0/tmp<101>)
+     LUT5:I4->O            1   0.097   0.000  RAM_reg_b1/mux30811 (RAM_reg_b1/RAM[0][101]_din[101]_mux_5_OUT<101>)
+     FDRE:D                    0.008          RAM_reg_b1/RAM_0_101
+    ----------------------------------------
+    Total                     24.740ns (20.699ns logic, 4.041ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 6405606775566721000 / 110
+-------------------------------------------------------------------------
+Offset:              24.415ns (Levels of Logic = 63)
+  Source:            nReset (PAD)
+  Destination:       tmp_result_51 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: nReset to tmp_result_51
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1438   0.001   0.823  nReset_IBUF (nReset_IBUF)
+     LUT3:I0->O            1   0.097   0.000  add_f1/Madd_tmp_lut<0> (add_f1/Madd_tmp_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  add_f1/Madd_tmp_cy<0> (add_f1/Madd_tmp_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<1> (add_f1/Madd_tmp_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<2> (add_f1/Madd_tmp_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<3> (add_f1/Madd_tmp_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<4> (add_f1/Madd_tmp_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<5> (add_f1/Madd_tmp_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<6> (add_f1/Madd_tmp_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<7> (add_f1/Madd_tmp_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<8> (add_f1/Madd_tmp_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<9> (add_f1/Madd_tmp_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<10> (add_f1/Madd_tmp_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<11> (add_f1/Madd_tmp_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<12> (add_f1/Madd_tmp_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<13> (add_f1/Madd_tmp_cy<13>)
+     XORCY:CI->O           1   0.370   0.355  add_f1/Madd_tmp_xor<14> (add_f1/tmp<14>)
+     LUT3:I2->O            1   0.097   0.000  add_f0/Madd_tmp_lut<14> (add_f0/Madd_tmp_lut<14>)
+     MUXCY:S->O            1   0.353   0.000  add_f0/Madd_tmp_cy<14> (add_f0/Madd_tmp_cy<14>)
+     XORCY:CI->O           2   0.370   0.444  add_f0/Madd_tmp_xor<15> (add_f0/tmp<15>)
+     LUT3:I1->O            1   0.097   0.000  add_b0/Madd_tmp_lut<37> (add_b0/Madd_tmp_lut<37>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<37> (add_b0/Madd_tmp_cy<37>)
+     XORCY:CI->O           1   0.370   0.355  add_b0/Madd_tmp_xor<38> (add_b0/tmp<38>)
+     LUT2:I1->O            1   0.097   0.339  add_b0/Mmux_out82 (y<16>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_b0/Mmult_tmp_submult_0 (mul_b0/Mmult_tmp_submult_0_PCOUT_to_mul_b0/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_01 (mul_b0/Mmult_tmp_submult_01_PCOUT_to_mul_b0/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_02 (mul_b0/Mmult_tmp_submult_02_PCOUT_to_mul_b0/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P7    1   1.271   0.355  mul_b0/Mmult_tmp_submult_03 (mul_b0/Mmult_tmp_submult_0_41)
+     LUT2:I1->O            1   0.097   0.000  mul_b0/Mmult_tmp1_Madd_lut<41> (mul_b0/Mmult_tmp1_Madd_lut<41>)
+     MUXCY:S->O            1   0.353   0.000  mul_b0/Mmult_tmp1_Madd_cy<41> (mul_b0/Mmult_tmp1_Madd_cy<41>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<42> (mul_b0/Mmult_tmp1_Madd_cy<42>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<43> (mul_b0/Mmult_tmp1_Madd_cy<43>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<44> (mul_b0/Mmult_tmp1_Madd_cy<44>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<45> (mul_b0/Mmult_tmp1_Madd_cy<45>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<46> (mul_b0/Mmult_tmp1_Madd_cy<46>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<47> (mul_b0/Mmult_tmp1_Madd_cy<47>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<48> (mul_b0/Mmult_tmp1_Madd_cy<48>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<49> (mul_b0/Mmult_tmp1_Madd_cy<49>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<50> (mul_b0/Mmult_tmp1_Madd_cy<50>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<51> (mul_b0/Mmult_tmp1_Madd_cy<51>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<52> (mul_b0/Mmult_tmp1_Madd_cy<52>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<53> (mul_b0/Mmult_tmp1_Madd_cy<53>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<54> (mul_b0/Mmult_tmp1_Madd_cy<54>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<55> (mul_b0/Mmult_tmp1_Madd_cy<55>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp1_Madd_cy<56> (mul_b0/Mmult_tmp1_Madd_cy<56>)
+     XORCY:CI->O           5   0.370   0.378  mul_b0/Mmult_tmp1_Madd_xor<57> (mul_b0/tmp<57>)
+     LUT2:I1->O            1   0.097   0.339  mul_b0/Mmux_out551 (tmp<57>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_scale/Mmult_tmp_submult_1 (mul_scale/Mmult_tmp_submult_1_PCOUT_to_mul_scale/Mmult_tmp_submult_11_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_scale/Mmult_tmp_submult_11 (mul_scale/Mmult_tmp_submult_11_PCOUT_to_mul_scale/Mmult_tmp_submult_12_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_scale/Mmult_tmp_submult_12 (mul_scale/Mmult_tmp_submult_12_PCOUT_to_mul_scale/Mmult_tmp_submult_13_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.271   0.355  mul_scale/Mmult_tmp_submult_13 (mul_scale/Mmult_tmp_submult_1_34)
+     LUT2:I1->O            1   0.097   0.000  mul_scale/Mmult_tmp1_Madd_lut<75> (mul_scale/Mmult_tmp1_Madd_lut<75>)
+     MUXCY:S->O            1   0.353   0.000  mul_scale/Mmult_tmp1_Madd_cy<75> (mul_scale/Mmult_tmp1_Madd_cy<75>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<76> (mul_scale/Mmult_tmp1_Madd_cy<76>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<77> (mul_scale/Mmult_tmp1_Madd_cy<77>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<78> (mul_scale/Mmult_tmp1_Madd_cy<78>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<79> (mul_scale/Mmult_tmp1_Madd_cy<79>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<80> (mul_scale/Mmult_tmp1_Madd_cy<80>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<81> (mul_scale/Mmult_tmp1_Madd_cy<81>)
+     MUXCY:CI->O           1   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<82> (mul_scale/Mmult_tmp1_Madd_cy<82>)
+     MUXCY:CI->O           0   0.023   0.000  mul_scale/Mmult_tmp1_Madd_cy<83> (mul_scale/Mmult_tmp1_Madd_cy<83>)
+     XORCY:CI->O           1   0.370   0.355  mul_scale/Mmult_tmp1_Madd_xor<84> (mul_scale/tmp<84>)
+     LUT2:I1->O            1   0.097   0.000  n0052[66:0]<51>1 (n0052[66:0]<51>)
+     FD:D                      0.008          tmp_result_51
+    ----------------------------------------
+    Total                     24.415ns (20.316ns logic, 4.099ns route)
+                                       (83.2% logic, 16.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_g'
+  Total number of paths / destination ports: 320667947727728 / 2832
+-------------------------------------------------------------------------
+Offset:              16.152ns (Levels of Logic = 52)
+  Source:            nReset (PAD)
+  Destination:       RAM_reg_b1/RAM_0_407 (FF)
+  Destination Clock: CLK_g rising
+
+  Data Path: nReset to RAM_reg_b1/RAM_0_407
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1438   0.001   0.823  nReset_IBUF (nReset_IBUF)
+     LUT3:I0->O            1   0.097   0.000  add_f1/Madd_tmp_lut<0> (add_f1/Madd_tmp_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  add_f1/Madd_tmp_cy<0> (add_f1/Madd_tmp_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<1> (add_f1/Madd_tmp_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<2> (add_f1/Madd_tmp_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<3> (add_f1/Madd_tmp_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<4> (add_f1/Madd_tmp_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<5> (add_f1/Madd_tmp_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<6> (add_f1/Madd_tmp_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<7> (add_f1/Madd_tmp_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<8> (add_f1/Madd_tmp_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<9> (add_f1/Madd_tmp_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<10> (add_f1/Madd_tmp_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<11> (add_f1/Madd_tmp_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<12> (add_f1/Madd_tmp_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<13> (add_f1/Madd_tmp_cy<13>)
+     XORCY:CI->O           1   0.370   0.355  add_f1/Madd_tmp_xor<14> (add_f1/tmp<14>)
+     LUT3:I2->O            1   0.097   0.000  add_f0/Madd_tmp_lut<14> (add_f0/Madd_tmp_lut<14>)
+     MUXCY:S->O            1   0.353   0.000  add_f0/Madd_tmp_cy<14> (add_f0/Madd_tmp_cy<14>)
+     XORCY:CI->O           2   0.370   0.444  add_f0/Madd_tmp_xor<15> (add_f0/tmp<15>)
+     LUT3:I1->O            1   0.097   0.000  add_b0/Madd_tmp_lut<37> (add_b0/Madd_tmp_lut<37>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<37> (add_b0/Madd_tmp_cy<37>)
+     XORCY:CI->O           1   0.370   0.355  add_b0/Madd_tmp_xor<38> (add_b0/tmp<38>)
+     LUT2:I1->O            1   0.097   0.339  add_b0/Mmux_out82 (y<16>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_b0/Mmult_tmp_submult_0 (mul_b0/Mmult_tmp_submult_0_PCOUT_to_mul_b0/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_01 (mul_b0/Mmult_tmp_submult_01_PCOUT_to_mul_b0/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_b0/Mmult_tmp_submult_02 (mul_b0/Mmult_tmp_submult_02_PCOUT_to_mul_b0/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P23   45   1.271   0.487  mul_b0/Mmult_tmp_submult_03 (mul_b0/Mmult_tmp_submult_0_57)
+     LUT2:I1->O            1   0.097   0.000  mul_b0/Mmult_tmp0_Madd_lut<59> (mul_b0/Mmult_tmp0_Madd_lut<59>)
+     MUXCY:S->O            1   0.353   0.000  mul_b0/Mmult_tmp0_Madd_cy<59> (mul_b0/Mmult_tmp0_Madd_cy<59>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<60> (mul_b0/Mmult_tmp0_Madd_cy<60>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<61> (mul_b0/Mmult_tmp0_Madd_cy<61>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<62> (mul_b0/Mmult_tmp0_Madd_cy<62>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<63> (mul_b0/Mmult_tmp0_Madd_cy<63>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<64> (mul_b0/Mmult_tmp0_Madd_cy<64>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<65> (mul_b0/Mmult_tmp0_Madd_cy<65>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<66> (mul_b0/Mmult_tmp0_Madd_cy<66>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<67> (mul_b0/Mmult_tmp0_Madd_cy<67>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<68> (mul_b0/Mmult_tmp0_Madd_cy<68>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<69> (mul_b0/Mmult_tmp0_Madd_cy<69>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<70> (mul_b0/Mmult_tmp0_Madd_cy<70>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<71> (mul_b0/Mmult_tmp0_Madd_cy<71>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<72> (mul_b0/Mmult_tmp0_Madd_cy<72>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<73> (mul_b0/Mmult_tmp0_Madd_cy<73>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<74> (mul_b0/Mmult_tmp0_Madd_cy<74>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<75> (mul_b0/Mmult_tmp0_Madd_cy<75>)
+     MUXCY:CI->O           1   0.023   0.000  mul_b0/Mmult_tmp0_Madd_cy<76> (mul_b0/Mmult_tmp0_Madd_cy<76>)
+     XORCY:CI->O           1   0.370   0.439  mul_b0/Mmult_tmp0_Madd_xor<77> (mul_b0/Mmult_tmp0_Madd_100)
+     LUT2:I0->O            1   0.097   0.000  mul_b0/Mmult_tmp1_Madd_lut<100> (mul_b0/Mmult_tmp1_Madd_lut<100>)
+     MUXCY:S->O            0   0.353   0.000  mul_b0/Mmult_tmp1_Madd_cy<100> (mul_b0/Mmult_tmp1_Madd_cy<100>)
+     XORCY:CI->O           4   0.370   0.372  mul_b0/Mmult_tmp1_Madd_xor<101> (mul_b0/tmp<101>)
+     LUT5:I4->O            1   0.097   0.000  RAM_reg_b1/mux30811 (RAM_reg_b1/RAM[0][101]_din[101]_mux_5_OUT<101>)
+     FDRE:D                    0.008          RAM_reg_b1/RAM_0_101
+    ----------------------------------------
+    Total                     16.152ns (12.537ns logic, 3.615ns route)
+                                       (77.6% logic, 22.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 526462834118966 / 71
+-------------------------------------------------------------------------
+Offset:              20.397ns (Levels of Logic = 55)
+  Source:            pointer_0_1 (FF)
+  Destination:       OVF_b0 (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: pointer_0_1 to OVF_b0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.361   0.344  pointer_0_1 (pointer_0_1)
+     INV:I->O              1   0.113   0.000  Mmult_n0062_Madd_lut<0>_INV_0 (Mmult_n0062_Madd_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mmult_n0062_Madd_cy<0> (Mmult_n0062_Madd_cy<0>)
+     XORCY:CI->O           1   0.370   0.339  Mmult_n0062_Madd_xor<1> (Mmult_n0062_Madd_1)
+     INV:I->O              1   0.113   0.000  Mmult_n0062_Madd1_lut<1>_INV_0 (Mmult_n0062_Madd1_lut<1>)
+     MUXCY:S->O            1   0.353   0.000  Mmult_n0062_Madd1_cy<1> (Mmult_n0062_Madd1_cy<1>)
+     XORCY:CI->O           6   0.370   0.467  Mmult_n0062_Madd1_xor<2> (Madd_n0066_Madd_lut<3>)
+     LUT4:I2->O            2   0.097   0.344  n0066<4>11 (n0066<4>)
+     RAM32X1D:A4->SPO    105   0.097   0.482  Mram_coef_mem19 (pointer[31]_read_port_21_OUT<0>)
+     DSP48E1:B0->PCOUT47    1   3.244   0.000  mul_f2/Mmult_tmp_submult_0 (mul_f2/Mmult_tmp_submult_0_PCOUT_to_mul_f2/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f2/Mmult_tmp_submult_01 (mul_f2/Mmult_tmp_submult_01_PCOUT_to_mul_f2/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f2/Mmult_tmp_submult_02 (mul_f2/Mmult_tmp_submult_02_PCOUT_to_mul_f2/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P23   26   1.271   0.484  mul_f2/Mmult_tmp_submult_03 (mul_f2/Mmult_tmp0_Madd_lut<60>)
+     LUT3:I2->O            1   0.097   0.000  mul_f2/Mmult_tmp0_Madd_lut<59> (mul_f2/Mmult_tmp0_Madd_lut<59>)
+     MUXCY:S->O            1   0.353   0.000  mul_f2/Mmult_tmp0_Madd_cy<59> (mul_f2/Mmult_tmp0_Madd_cy<59>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<60> (mul_f2/Mmult_tmp0_Madd_cy<60>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<61> (mul_f2/Mmult_tmp0_Madd_cy<61>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<62> (mul_f2/Mmult_tmp0_Madd_cy<62>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<63> (mul_f2/Mmult_tmp0_Madd_cy<63>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<64> (mul_f2/Mmult_tmp0_Madd_cy<64>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<65> (mul_f2/Mmult_tmp0_Madd_cy<65>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<66> (mul_f2/Mmult_tmp0_Madd_cy<66>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<67> (mul_f2/Mmult_tmp0_Madd_cy<67>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<68> (mul_f2/Mmult_tmp0_Madd_cy<68>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<69> (mul_f2/Mmult_tmp0_Madd_cy<69>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<70> (mul_f2/Mmult_tmp0_Madd_cy<70>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<71> (mul_f2/Mmult_tmp0_Madd_cy<71>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<72> (mul_f2/Mmult_tmp0_Madd_cy<72>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f2/Mmult_tmp0_Madd_cy<73> (mul_f2/Mmult_tmp0_Madd_cy<73>)
+     XORCY:CI->O           1   0.370   0.355  mul_f2/Mmult_tmp0_Madd_xor<74> (mul_f2/Mmult_tmp0_Madd_80)
+     LUT2:I1->O            1   0.097   0.000  mul_f2/Mmult_tmp1_Madd_lut<80> (mul_f2/Mmult_tmp1_Madd_lut<80>)
+     MUXCY:S->O            1   0.353   0.000  mul_f2/Mmult_tmp1_Madd_cy<80> (mul_f2/Mmult_tmp1_Madd_cy<80>)
+     XORCY:CI->O           1   0.370   0.355  mul_f2/Mmult_tmp1_Madd_xor<81> (mul_f2/tmp<81>)
+     LUT3:I2->O            1   0.097   0.000  add_f1/Madd_tmp_lut<81> (add_f1/Madd_tmp_lut<81>)
+     MUXCY:S->O            0   0.353   0.000  add_f1/Madd_tmp_cy<81> (add_f1/Madd_tmp_cy<81>)
+     XORCY:CI->O           6   0.370   0.467  add_f1/Madd_tmp_xor<82> (add_f1/tmp<82>)
+     LUT3:I1->O            1   0.097   0.000  add_f0/Madd_tmp_lut<82> (add_f0/Madd_tmp_lut<82>)
+     MUXCY:S->O            0   0.353   0.000  add_f0/Madd_tmp_cy<82> (add_f0/Madd_tmp_cy<82>)
+     XORCY:CI->O           6   0.370   0.467  add_f0/Madd_tmp_xor<83> (add_f0/tmp<83>)
+     LUT6:I4->O           12   0.097   0.632  add_f0/Mmux_out831 (xb0x1b1x2b2<84>)
+     LUT3:I0->O            1   0.097   0.000  add_b0/Madd_tmp_lut<106> (add_b0/Madd_tmp_lut<106>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<106> (add_b0/Madd_tmp_cy<106>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<107> (add_b0/Madd_tmp_cy<107>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<108> (add_b0/Madd_tmp_cy<108>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<109> (add_b0/Madd_tmp_cy<109>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<110> (add_b0/Madd_tmp_cy<110>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<111> (add_b0/Madd_tmp_cy<111>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<112> (add_b0/Madd_tmp_cy<112>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<113> (add_b0/Madd_tmp_cy<113>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<114> (add_b0/Madd_tmp_cy<114>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<115> (add_b0/Madd_tmp_cy<115>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<116> (add_b0/Madd_tmp_cy<116>)
+     MUXCY:CI->O           0   0.023   0.000  add_b0/Madd_tmp_cy<117> (add_b0/Madd_tmp_cy<117>)
+     XORCY:CI->O          17   0.370   0.833  add_b0/Madd_tmp_xor<118> (add_b0/tmp<118>)
+     LUT6:I1->O            1   0.097   0.339  add_b0/Mmux_OVF11 (OVF_b0_OBUF)
+     OBUF:I->O                 0.000          OVF_b0_OBUF (OVF_b0)
+    ----------------------------------------
+    Total                     20.397ns (14.487ns logic, 5.910ns route)
+                                       (71.0% logic, 29.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mul_f2/Mmult_tmp_submult_2_Madd_lut<16>'
+  Total number of paths / destination ports: 13811228223236 / 4
+-------------------------------------------------------------------------
+Offset:              17.627ns (Levels of Logic = 47)
+  Source:            Mram_coef_mem3 (RAM)
+  Destination:       OVF_b0 (PAD)
+  Source Clock:      mul_f2/Mmult_tmp_submult_2_Madd_lut<16> rising
+
+  Data Path: Mram_coef_mem3 to OVF_b0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32X1D:WCLK->DPO  105   0.862   0.482  Mram_coef_mem3 (pointer[31]_read_port_18_OUT<0>)
+     DSP48E1:B0->PCOUT47    1   3.244   0.000  mul_f1/Mmult_tmp_submult_0 (mul_f1/Mmult_tmp_submult_0_PCOUT_to_mul_f1/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f1/Mmult_tmp_submult_01 (mul_f1/Mmult_tmp_submult_01_PCOUT_to_mul_f1/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f1/Mmult_tmp_submult_02 (mul_f1/Mmult_tmp_submult_02_PCOUT_to_mul_f1/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P23   26   1.271   0.484  mul_f1/Mmult_tmp_submult_03 (mul_f1/Mmult_tmp0_Madd_lut<60>)
+     LUT3:I2->O            1   0.097   0.000  mul_f1/Mmult_tmp0_Madd_lut<59> (mul_f1/Mmult_tmp0_Madd_lut<59>)
+     MUXCY:S->O            1   0.353   0.000  mul_f1/Mmult_tmp0_Madd_cy<59> (mul_f1/Mmult_tmp0_Madd_cy<59>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<60> (mul_f1/Mmult_tmp0_Madd_cy<60>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<61> (mul_f1/Mmult_tmp0_Madd_cy<61>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<62> (mul_f1/Mmult_tmp0_Madd_cy<62>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<63> (mul_f1/Mmult_tmp0_Madd_cy<63>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<64> (mul_f1/Mmult_tmp0_Madd_cy<64>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<65> (mul_f1/Mmult_tmp0_Madd_cy<65>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<66> (mul_f1/Mmult_tmp0_Madd_cy<66>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<67> (mul_f1/Mmult_tmp0_Madd_cy<67>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<68> (mul_f1/Mmult_tmp0_Madd_cy<68>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<69> (mul_f1/Mmult_tmp0_Madd_cy<69>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<70> (mul_f1/Mmult_tmp0_Madd_cy<70>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<71> (mul_f1/Mmult_tmp0_Madd_cy<71>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<72> (mul_f1/Mmult_tmp0_Madd_cy<72>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<73> (mul_f1/Mmult_tmp0_Madd_cy<73>)
+     XORCY:CI->O           1   0.370   0.355  mul_f1/Mmult_tmp0_Madd_xor<74> (mul_f1/Mmult_tmp0_Madd_80)
+     LUT2:I1->O            1   0.097   0.000  mul_f1/Mmult_tmp1_Madd_lut<80> (mul_f1/Mmult_tmp1_Madd_lut<80>)
+     MUXCY:S->O            1   0.353   0.000  mul_f1/Mmult_tmp1_Madd_cy<80> (mul_f1/Mmult_tmp1_Madd_cy<80>)
+     XORCY:CI->O           2   0.370   0.444  mul_f1/Mmult_tmp1_Madd_xor<81> (mul_f1/tmp<81>)
+     LUT3:I1->O            1   0.097   0.000  add_f1/Madd_tmp_lut<81> (add_f1/Madd_tmp_lut<81>)
+     MUXCY:S->O            0   0.353   0.000  add_f1/Madd_tmp_cy<81> (add_f1/Madd_tmp_cy<81>)
+     XORCY:CI->O           6   0.370   0.467  add_f1/Madd_tmp_xor<82> (add_f1/tmp<82>)
+     LUT3:I1->O            1   0.097   0.000  add_f0/Madd_tmp_lut<82> (add_f0/Madd_tmp_lut<82>)
+     MUXCY:S->O            0   0.353   0.000  add_f0/Madd_tmp_cy<82> (add_f0/Madd_tmp_cy<82>)
+     XORCY:CI->O           6   0.370   0.467  add_f0/Madd_tmp_xor<83> (add_f0/tmp<83>)
+     LUT6:I4->O           12   0.097   0.632  add_f0/Mmux_out831 (xb0x1b1x2b2<84>)
+     LUT3:I0->O            1   0.097   0.000  add_b0/Madd_tmp_lut<106> (add_b0/Madd_tmp_lut<106>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<106> (add_b0/Madd_tmp_cy<106>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<107> (add_b0/Madd_tmp_cy<107>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<108> (add_b0/Madd_tmp_cy<108>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<109> (add_b0/Madd_tmp_cy<109>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<110> (add_b0/Madd_tmp_cy<110>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<111> (add_b0/Madd_tmp_cy<111>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<112> (add_b0/Madd_tmp_cy<112>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<113> (add_b0/Madd_tmp_cy<113>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<114> (add_b0/Madd_tmp_cy<114>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<115> (add_b0/Madd_tmp_cy<115>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<116> (add_b0/Madd_tmp_cy<116>)
+     MUXCY:CI->O           0   0.023   0.000  add_b0/Madd_tmp_cy<117> (add_b0/Madd_tmp_cy<117>)
+     XORCY:CI->O          17   0.370   0.833  add_b0/Madd_tmp_xor<118> (add_b0/tmp<118>)
+     LUT6:I1->O            1   0.097   0.339  add_b0/Mmux_OVF11 (OVF_b0_OBUF)
+     OBUF:I->O                 0.000          OVF_b0_OBUF (OVF_b0)
+    ----------------------------------------
+    Total                     17.627ns (13.122ns logic, 4.505ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_g'
+  Total number of paths / destination ports: 52240743600620 / 4
+-------------------------------------------------------------------------
+Offset:              17.997ns (Levels of Logic = 48)
+  Source:            RAM_reg_f1/RAM_0_16 (FF)
+  Destination:       OVF_b0 (PAD)
+  Source Clock:      CLK_g rising
+
+  Data Path: RAM_reg_f1/RAM_0_16 to OVF_b0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.361   0.765  RAM_reg_f1/RAM_0_16 (RAM_reg_f1/RAM_0_16)
+     LUT6:I0->O            1   0.097   0.339  RAM_reg_f1/mux27511 (x1<16>)
+     DSP48E1:A16->PCOUT47    1   3.397   0.000  mul_f1/Mmult_tmp_submult_0 (mul_f1/Mmult_tmp_submult_0_PCOUT_to_mul_f1/Mmult_tmp_submult_01_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f1/Mmult_tmp_submult_01 (mul_f1/Mmult_tmp_submult_01_PCOUT_to_mul_f1/Mmult_tmp_submult_02_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  mul_f1/Mmult_tmp_submult_02 (mul_f1/Mmult_tmp_submult_02_PCOUT_to_mul_f1/Mmult_tmp_submult_03_PCIN_47)
+     DSP48E1:PCIN47->P23   26   1.271   0.484  mul_f1/Mmult_tmp_submult_03 (mul_f1/Mmult_tmp0_Madd_lut<60>)
+     LUT3:I2->O            1   0.097   0.000  mul_f1/Mmult_tmp0_Madd_lut<59> (mul_f1/Mmult_tmp0_Madd_lut<59>)
+     MUXCY:S->O            1   0.353   0.000  mul_f1/Mmult_tmp0_Madd_cy<59> (mul_f1/Mmult_tmp0_Madd_cy<59>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<60> (mul_f1/Mmult_tmp0_Madd_cy<60>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<61> (mul_f1/Mmult_tmp0_Madd_cy<61>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<62> (mul_f1/Mmult_tmp0_Madd_cy<62>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<63> (mul_f1/Mmult_tmp0_Madd_cy<63>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<64> (mul_f1/Mmult_tmp0_Madd_cy<64>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<65> (mul_f1/Mmult_tmp0_Madd_cy<65>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<66> (mul_f1/Mmult_tmp0_Madd_cy<66>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<67> (mul_f1/Mmult_tmp0_Madd_cy<67>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<68> (mul_f1/Mmult_tmp0_Madd_cy<68>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<69> (mul_f1/Mmult_tmp0_Madd_cy<69>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<70> (mul_f1/Mmult_tmp0_Madd_cy<70>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<71> (mul_f1/Mmult_tmp0_Madd_cy<71>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<72> (mul_f1/Mmult_tmp0_Madd_cy<72>)
+     MUXCY:CI->O           1   0.023   0.000  mul_f1/Mmult_tmp0_Madd_cy<73> (mul_f1/Mmult_tmp0_Madd_cy<73>)
+     XORCY:CI->O           1   0.370   0.355  mul_f1/Mmult_tmp0_Madd_xor<74> (mul_f1/Mmult_tmp0_Madd_80)
+     LUT2:I1->O            1   0.097   0.000  mul_f1/Mmult_tmp1_Madd_lut<80> (mul_f1/Mmult_tmp1_Madd_lut<80>)
+     MUXCY:S->O            1   0.353   0.000  mul_f1/Mmult_tmp1_Madd_cy<80> (mul_f1/Mmult_tmp1_Madd_cy<80>)
+     XORCY:CI->O           2   0.370   0.444  mul_f1/Mmult_tmp1_Madd_xor<81> (mul_f1/tmp<81>)
+     LUT3:I1->O            1   0.097   0.000  add_f1/Madd_tmp_lut<81> (add_f1/Madd_tmp_lut<81>)
+     MUXCY:S->O            0   0.353   0.000  add_f1/Madd_tmp_cy<81> (add_f1/Madd_tmp_cy<81>)
+     XORCY:CI->O           6   0.370   0.467  add_f1/Madd_tmp_xor<82> (add_f1/tmp<82>)
+     LUT3:I1->O            1   0.097   0.000  add_f0/Madd_tmp_lut<82> (add_f0/Madd_tmp_lut<82>)
+     MUXCY:S->O            0   0.353   0.000  add_f0/Madd_tmp_cy<82> (add_f0/Madd_tmp_cy<82>)
+     XORCY:CI->O           6   0.370   0.467  add_f0/Madd_tmp_xor<83> (add_f0/tmp<83>)
+     LUT6:I4->O           12   0.097   0.632  add_f0/Mmux_out831 (xb0x1b1x2b2<84>)
+     LUT3:I0->O            1   0.097   0.000  add_b0/Madd_tmp_lut<106> (add_b0/Madd_tmp_lut<106>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<106> (add_b0/Madd_tmp_cy<106>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<107> (add_b0/Madd_tmp_cy<107>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<108> (add_b0/Madd_tmp_cy<108>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<109> (add_b0/Madd_tmp_cy<109>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<110> (add_b0/Madd_tmp_cy<110>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<111> (add_b0/Madd_tmp_cy<111>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<112> (add_b0/Madd_tmp_cy<112>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<113> (add_b0/Madd_tmp_cy<113>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<114> (add_b0/Madd_tmp_cy<114>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<115> (add_b0/Madd_tmp_cy<115>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<116> (add_b0/Madd_tmp_cy<116>)
+     MUXCY:CI->O           0   0.023   0.000  add_b0/Madd_tmp_cy<117> (add_b0/Madd_tmp_cy<117>)
+     XORCY:CI->O          17   0.370   0.833  add_b0/Madd_tmp_xor<118> (add_b0/tmp<118>)
+     LUT6:I1->O            1   0.097   0.339  add_b0/Mmux_OVF11 (OVF_b0_OBUF)
+     OBUF:I->O                 0.000          OVF_b0_OBUF (OVF_b0)
+    ----------------------------------------
+    Total                     17.997ns (12.871ns logic, 5.126ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 630273 / 4
+-------------------------------------------------------------------------
+Delay:               8.333ns (Levels of Logic = 105)
+  Source:            nReset (PAD)
+  Destination:       OVF_b0 (PAD)
+
+  Data Path: nReset to OVF_b0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1438   0.001   0.823  nReset_IBUF (nReset_IBUF)
+     LUT3:I0->O            1   0.097   0.000  add_f1/Madd_tmp_lut<0> (add_f1/Madd_tmp_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  add_f1/Madd_tmp_cy<0> (add_f1/Madd_tmp_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<1> (add_f1/Madd_tmp_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<2> (add_f1/Madd_tmp_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<3> (add_f1/Madd_tmp_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<4> (add_f1/Madd_tmp_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<5> (add_f1/Madd_tmp_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<6> (add_f1/Madd_tmp_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<7> (add_f1/Madd_tmp_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<8> (add_f1/Madd_tmp_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<9> (add_f1/Madd_tmp_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<10> (add_f1/Madd_tmp_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<11> (add_f1/Madd_tmp_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<12> (add_f1/Madd_tmp_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<13> (add_f1/Madd_tmp_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<14> (add_f1/Madd_tmp_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<15> (add_f1/Madd_tmp_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<16> (add_f1/Madd_tmp_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<17> (add_f1/Madd_tmp_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<18> (add_f1/Madd_tmp_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<19> (add_f1/Madd_tmp_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<20> (add_f1/Madd_tmp_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<21> (add_f1/Madd_tmp_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<22> (add_f1/Madd_tmp_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<23> (add_f1/Madd_tmp_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<24> (add_f1/Madd_tmp_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<25> (add_f1/Madd_tmp_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<26> (add_f1/Madd_tmp_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<27> (add_f1/Madd_tmp_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<28> (add_f1/Madd_tmp_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<29> (add_f1/Madd_tmp_cy<29>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<30> (add_f1/Madd_tmp_cy<30>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<31> (add_f1/Madd_tmp_cy<31>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<32> (add_f1/Madd_tmp_cy<32>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<33> (add_f1/Madd_tmp_cy<33>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<34> (add_f1/Madd_tmp_cy<34>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<35> (add_f1/Madd_tmp_cy<35>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<36> (add_f1/Madd_tmp_cy<36>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<37> (add_f1/Madd_tmp_cy<37>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<38> (add_f1/Madd_tmp_cy<38>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<39> (add_f1/Madd_tmp_cy<39>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<40> (add_f1/Madd_tmp_cy<40>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<41> (add_f1/Madd_tmp_cy<41>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<42> (add_f1/Madd_tmp_cy<42>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<43> (add_f1/Madd_tmp_cy<43>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<44> (add_f1/Madd_tmp_cy<44>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<45> (add_f1/Madd_tmp_cy<45>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<46> (add_f1/Madd_tmp_cy<46>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<47> (add_f1/Madd_tmp_cy<47>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<48> (add_f1/Madd_tmp_cy<48>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<49> (add_f1/Madd_tmp_cy<49>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<50> (add_f1/Madd_tmp_cy<50>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<51> (add_f1/Madd_tmp_cy<51>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<52> (add_f1/Madd_tmp_cy<52>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<53> (add_f1/Madd_tmp_cy<53>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<54> (add_f1/Madd_tmp_cy<54>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<55> (add_f1/Madd_tmp_cy<55>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<56> (add_f1/Madd_tmp_cy<56>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<57> (add_f1/Madd_tmp_cy<57>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<58> (add_f1/Madd_tmp_cy<58>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<59> (add_f1/Madd_tmp_cy<59>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<60> (add_f1/Madd_tmp_cy<60>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<61> (add_f1/Madd_tmp_cy<61>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<62> (add_f1/Madd_tmp_cy<62>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<63> (add_f1/Madd_tmp_cy<63>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<64> (add_f1/Madd_tmp_cy<64>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<65> (add_f1/Madd_tmp_cy<65>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<66> (add_f1/Madd_tmp_cy<66>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<67> (add_f1/Madd_tmp_cy<67>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<68> (add_f1/Madd_tmp_cy<68>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<69> (add_f1/Madd_tmp_cy<69>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<70> (add_f1/Madd_tmp_cy<70>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<71> (add_f1/Madd_tmp_cy<71>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<72> (add_f1/Madd_tmp_cy<72>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<73> (add_f1/Madd_tmp_cy<73>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<74> (add_f1/Madd_tmp_cy<74>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<75> (add_f1/Madd_tmp_cy<75>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<76> (add_f1/Madd_tmp_cy<76>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<77> (add_f1/Madd_tmp_cy<77>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<78> (add_f1/Madd_tmp_cy<78>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<79> (add_f1/Madd_tmp_cy<79>)
+     MUXCY:CI->O           1   0.023   0.000  add_f1/Madd_tmp_cy<80> (add_f1/Madd_tmp_cy<80>)
+     MUXCY:CI->O           0   0.023   0.000  add_f1/Madd_tmp_cy<81> (add_f1/Madd_tmp_cy<81>)
+     XORCY:CI->O           6   0.370   0.467  add_f1/Madd_tmp_xor<82> (add_f1/tmp<82>)
+     LUT3:I1->O            1   0.097   0.000  add_f0/Madd_tmp_lut<82> (add_f0/Madd_tmp_lut<82>)
+     MUXCY:S->O            0   0.353   0.000  add_f0/Madd_tmp_cy<82> (add_f0/Madd_tmp_cy<82>)
+     XORCY:CI->O           6   0.370   0.467  add_f0/Madd_tmp_xor<83> (add_f0/tmp<83>)
+     LUT6:I4->O           12   0.097   0.632  add_f0/Mmux_out831 (xb0x1b1x2b2<84>)
+     LUT3:I0->O            1   0.097   0.000  add_b0/Madd_tmp_lut<106> (add_b0/Madd_tmp_lut<106>)
+     MUXCY:S->O            1   0.353   0.000  add_b0/Madd_tmp_cy<106> (add_b0/Madd_tmp_cy<106>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<107> (add_b0/Madd_tmp_cy<107>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<108> (add_b0/Madd_tmp_cy<108>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<109> (add_b0/Madd_tmp_cy<109>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<110> (add_b0/Madd_tmp_cy<110>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<111> (add_b0/Madd_tmp_cy<111>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<112> (add_b0/Madd_tmp_cy<112>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<113> (add_b0/Madd_tmp_cy<113>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<114> (add_b0/Madd_tmp_cy<114>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<115> (add_b0/Madd_tmp_cy<115>)
+     MUXCY:CI->O           1   0.023   0.000  add_b0/Madd_tmp_cy<116> (add_b0/Madd_tmp_cy<116>)
+     MUXCY:CI->O           0   0.023   0.000  add_b0/Madd_tmp_cy<117> (add_b0/Madd_tmp_cy<117>)
+     XORCY:CI->O          17   0.370   0.833  add_b0/Madd_tmp_xor<118> (add_b0/tmp<118>)
+     LUT6:I1->O            1   0.097   0.339  add_b0/Mmux_OVF11 (OVF_b0_OBUF)
+     OBUF:I->O                 0.000          OVF_b0_OBUF (OVF_b0)
+    ----------------------------------------
+    Total                      8.333ns (4.771ns logic, 3.562ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+CLK                                    |   34.118|         |         |         |
+CLK_g                                  |   31.613|         |         |         |
+mul_f2/Mmult_tmp_submult_2_Madd_lut<16>|   31.259|         |         |         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK_g
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+CLK                                    |   27.140|         |         |         |
+CLK_g                                  |   24.740|         |         |         |
+mul_f2/Mmult_tmp_submult_2_Madd_lut<16>|   24.369|         |         |         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mul_f2/Mmult_tmp_submult_2_Madd_lut<16>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.688|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 44.00 secs
+Total CPU time to Xst completion: 44.78 secs
+ 
+--> 
+
+Total memory usage is 856320 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
+Number of infos    :   67 (   0 filtered)
+

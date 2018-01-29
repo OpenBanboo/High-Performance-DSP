@@ -1,0 +1,8 @@
+verilog work "dmux.v"
+verilog work "controlUnit.v"
+verilog work "../HW2/Qestion2_FIFO.v"
+verilog work "../HW2/mux.v"
+verilog work "../HW1/HW1/register.v"
+verilog work "../../HW3/Project/HW3/SourceCode/sMult.v"
+verilog work "../../HW3/Project/HW3/SourceCode/fixpoint_adder.v"
+verilog work "FIR_parametric_1mul_1add.v"

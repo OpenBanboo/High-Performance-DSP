@@ -1,0 +1,513 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: FIR_multicycle_326.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FIR_multicycle_326.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FIR_multicycle_326"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : FIR_multicycle_326
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW1\HW1\register.v" into library work
+Parsing module <register>.
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\sMult.v" into library work
+Parsing module <sMult>.
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\sMult.v" Line 22. parameter declaration becomes local in sMult with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\sMult.v" Line 23. parameter declaration becomes local in sMult with formal parameter declaration list
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" into library work
+Parsing module <fixpoint_adder>.
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" Line 20. parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" Line 21. parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v" Line 62. parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+Analyzing Verilog file "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_multicycle_326.v" into library work
+Parsing module <FIR_multicycle_326>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_multicycle_326.v" Line 106: Port OVF is not connected to this instance
+
+Elaborating module <FIR_multicycle_326>.
+WARNING:HDLCompiler:413 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_multicycle_326.v" Line 85: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <sMult(WI1=1,WF1=15,WI2=1,WF2=15,WIO=1,WFO=15)>.
+WARNING:HDLCompiler:1127 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_multicycle_326.v" Line 103: Assignment to mul_out_show ignored, since the identifier is never used
+
+Elaborating module <fixpoint_adder(WI1=1,WF1=15,WI2=1,WF2=15,WIO=1,WFO=15)>.
+WARNING:HDLCompiler:1127 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_multicycle_326.v" Line 109: Assignment to add_out_show ignored, since the identifier is never used
+
+Elaborating module <register(N=16)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FIR_multicycle_326>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_multicycle_326.v".
+        TAPSIZE = 3
+        WI = 1
+        WF = 15
+INFO:Xst:3210 - "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW5\FIR_multicycle_326.v" line 107: Output port <OVF> of the instance <add_Fang> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <h_mem> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 3-bit register for signal <pointer>.
+    Found 2-bit register for signal <current_state>.
+    Found 16-bit register for signal <y>.
+    Found 1-bit register for signal <x_mem_0<47>>.
+    Found 1-bit register for signal <x_mem_0<46>>.
+    Found 1-bit register for signal <x_mem_0<45>>.
+    Found 1-bit register for signal <x_mem_0<44>>.
+    Found 1-bit register for signal <x_mem_0<43>>.
+    Found 1-bit register for signal <x_mem_0<42>>.
+    Found 1-bit register for signal <x_mem_0<41>>.
+    Found 1-bit register for signal <x_mem_0<40>>.
+    Found 1-bit register for signal <x_mem_0<39>>.
+    Found 1-bit register for signal <x_mem_0<38>>.
+    Found 1-bit register for signal <x_mem_0<37>>.
+    Found 1-bit register for signal <x_mem_0<36>>.
+    Found 1-bit register for signal <x_mem_0<35>>.
+    Found 1-bit register for signal <x_mem_0<34>>.
+    Found 1-bit register for signal <x_mem_0<33>>.
+    Found 1-bit register for signal <x_mem_0<32>>.
+    Found 1-bit register for signal <x_mem_0<31>>.
+    Found 1-bit register for signal <x_mem_0<30>>.
+    Found 1-bit register for signal <x_mem_0<29>>.
+    Found 1-bit register for signal <x_mem_0<28>>.
+    Found 1-bit register for signal <x_mem_0<27>>.
+    Found 1-bit register for signal <x_mem_0<26>>.
+    Found 1-bit register for signal <x_mem_0<25>>.
+    Found 1-bit register for signal <x_mem_0<24>>.
+    Found 1-bit register for signal <x_mem_0<23>>.
+    Found 1-bit register for signal <x_mem_0<22>>.
+    Found 1-bit register for signal <x_mem_0<21>>.
+    Found 1-bit register for signal <x_mem_0<20>>.
+    Found 1-bit register for signal <x_mem_0<19>>.
+    Found 1-bit register for signal <x_mem_0<18>>.
+    Found 1-bit register for signal <x_mem_0<17>>.
+    Found 1-bit register for signal <x_mem_0<16>>.
+    Found 1-bit register for signal <x_mem_0<15>>.
+    Found 1-bit register for signal <x_mem_0<14>>.
+    Found 1-bit register for signal <x_mem_0<13>>.
+    Found 1-bit register for signal <x_mem_0<12>>.
+    Found 1-bit register for signal <x_mem_0<11>>.
+    Found 1-bit register for signal <x_mem_0<10>>.
+    Found 1-bit register for signal <x_mem_0<9>>.
+    Found 1-bit register for signal <x_mem_0<8>>.
+    Found 1-bit register for signal <x_mem_0<7>>.
+    Found 1-bit register for signal <x_mem_0<6>>.
+    Found 1-bit register for signal <x_mem_0<5>>.
+    Found 1-bit register for signal <x_mem_0<4>>.
+    Found 1-bit register for signal <x_mem_0<3>>.
+    Found 1-bit register for signal <x_mem_0<2>>.
+    Found 1-bit register for signal <x_mem_0<1>>.
+    Found 1-bit register for signal <x_mem_0<0>>.
+    Found 3-bit adder for signal <pointer[2]_GND_1_o_add_3_OUT> created at line 85.
+    Found 16-bit 3-to-1 multiplexer for signal <x_tmp> created at line 99.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <FIR_multicycle_326> synthesized.
+
+Synthesizing Unit <sMult>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\sMult.v".
+        WI1 = 1
+        WF1 = 15
+        WI2 = 1
+        WF2 = 15
+        WIO = 1
+        WFO = 15
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16x16-bit multiplier for signal <tmp> created at line 29.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Multiplexer(s).
+Unit <sMult> synthesized.
+
+Synthesizing Unit <fixpoint_adder>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HW3\Project\HW3\SourceCode\fixpoint_adder.v".
+        WI1 = 1
+        WF1 = 15
+        WI2 = 1
+        WF2 = 15
+        WIO = 1
+        WFO = 15
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit adder for signal <tmp> created at line 52.
+    Found 1-bit comparator equal for signal <in1[15]_in2[15]_equal_7_o> created at line 88
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <fixpoint_adder> synthesized.
+
+Synthesizing Unit <register>.
+    Related source file is "D:\Synchronous\Graduate Studies\Homework\672\HWprojects\HW1\HW1\register.v".
+        N = 16
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <register> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 3-bit adder                                           : 1
+# Registers                                            : 52
+ 1-bit register                                        : 48
+ 16-bit register                                       : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+# Comparators                                          : 1
+ 1-bit comparator equal                                : 1
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 2
+ 16-bit 3-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 48-bit 2-to-1 multiplexer                             : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\Xilinx14.6\14.6\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\Xilinx14.6\14.6\ISE_DS\ISE\.
+WARNING:Xst:1710 - FF/Latch <current_state_1> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <current_state<1:1>> (without init value) have a constant value of 0 in block <FIR_multicycle_326>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 3-bit adder                                           : 1
+# Registers                                            : 84
+ Flip-Flops                                            : 84
+# Comparators                                          : 1
+ 1-bit comparator equal                                : 1
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 2
+ 16-bit 3-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 48-bit 2-to-1 multiplexer                             : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <x_mem_0_47> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_46> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_45> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_44> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_43> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_42> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_41> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_40> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_37> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_39> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_38> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_36> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_35> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_34> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_33> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_32> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_31> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_30> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_29> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_28> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_27> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_26> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_25> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_22> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_24> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_23> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_21> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_20> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_19> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_18> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_17> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_16> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_15> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_14> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_13> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_12> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_11> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_10> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_7> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_9> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_8> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_6> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_5> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_4> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_3> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_2> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_1> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <x_mem_0_0> of sequential type is unconnected in block <FIR_multicycle_326>.
+
+Optimizing unit <FIR_multicycle_326> ...
+
+Optimizing unit <register> ...
+WARNING:Xst:1710 - FF/Latch <register_Fang/q_0> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_1> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_2> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_3> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_4> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_5> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_6> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_7> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_8> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_9> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_10> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_11> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_12> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_13> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_14> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_Fang/q_15> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_15> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_14> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_13> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_12> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_11> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_10> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_9> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_8> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_7> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_6> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_5> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_4> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_3> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_2> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_1> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_0> (without init value) has a constant value of 0 in block <FIR_multicycle_326>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <pointer_0> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <pointer_1> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <pointer_2> of sequential type is unconnected in block <FIR_multicycle_326>.
+WARNING:Xst:2677 - Node <current_state> of sequential type is unconnected in block <FIR_multicycle_326>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FIR_multicycle_326, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FIR_multicycle_326.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 16
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  16  out of    210     7%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.88 secs
+ 
+--> 
+
+Total memory usage is 751036 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   94 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

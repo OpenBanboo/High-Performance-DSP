@@ -1,0 +1,2 @@
+verilog work "../HW2/Qestion2_FIFO.v"
+verilog work "../HW2/tb_Question2_FIFO.v"

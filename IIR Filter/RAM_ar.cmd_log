@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/RAM_ar.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/RAM_ar.syr" 
+xst -intstyle ise -ifn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/RAM_ar.xst" -ofn "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/RAM_ar.syr" 

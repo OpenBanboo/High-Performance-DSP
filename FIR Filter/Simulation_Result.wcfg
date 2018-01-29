@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_multicycle_326_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_FIR_multicycle_326" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb_FIR_multicycle_326/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">y[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/add_float" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">add_float</obj_property>
+      <obj_property name="ObjectShortName">add_float</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/mul_float" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">mul_float</obj_property>
+      <obj_property name="ObjectShortName">mul_float</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/Testdata_vec_FIR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Testdata_vec_FIR[6:0,15:0]</obj_property>
+      <obj_property name="ObjectShortName">Testdata_vec_FIR[6:0,15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/real_h0" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_h0</obj_property>
+      <obj_property name="ObjectShortName">real_h0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/real_x" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_x</obj_property>
+      <obj_property name="ObjectShortName">real_x</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIR_multicycle_326/float_y" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">float_y</obj_property>
+      <obj_property name="ObjectShortName">float_y</obj_property>
+   </wvobject>
+</wave_config>

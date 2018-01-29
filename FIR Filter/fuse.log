@@ -1,0 +1,32 @@
+Running: D:\Xilinx14.6\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_N_small_isim_beh.exe -prj D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_N_small_beh.prj work.tb_FIR_N_small work.glbl 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../HW1/HW1/register.v" into library work
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/sMult.v" into library work
+WARNING:HDLCompiler:693 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/sMult.v" Line 22: Parameter declaration becomes local in sMult with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/sMult.v" Line 23: Parameter declaration becomes local in sMult with formal parameter declaration list
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/fixpoint_adder.v" into library work
+WARNING:HDLCompiler:693 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/fixpoint_adder.v" Line 20: Parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/fixpoint_adder.v" Line 21: Parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/fixpoint_adder.v" Line 62: Parameter declaration becomes local in fixpoint_adder with formal parameter declaration list
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/FIR_N_small.v" into library work
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_N_small.v" into library work
+Analyzing Verilog file "D:/Xilinx14.6/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_N_small.v" Line 39: Port OVF is not connected to this instance
+Completed static elaboration
+Compiling module sMult(WI1=1,WF1=15,WI2=1,WF2=15,...
+WARNING:HDLCompiler:756 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/../../HW3/Project/HW3/SourceCode/sMult.v" Line 35: Repetition multiplier must be positive
+Compiling module fixpoint_adder(WI1=1,WF1=15,WI2=...
+Compiling module register(N=16)
+Compiling module FIR_N_small
+Compiling module tb_FIR_N_small
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 6 Verilog Units
+Built simulation executable D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW5/tb_FIR_N_small_isim_beh.exe
+Fuse Memory Usage: 27936 KB
+Fuse CPU Usage: 421 ms

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_tb411_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sos_tb411" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/sos_tb411/Testdata_vec_IIR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Testdata_vec_IIR[49:0,15:0]</obj_property>
+      <obj_property name="ObjectShortName">Testdata_vec_IIR[49:0,15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/uut_sos_Fang/b_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b_mem[2:0,15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_mem[2:0,15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/uut_sos_Fang/a_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_mem[2:0,15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_mem[2:0,15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/OVF_f0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_f0</obj_property>
+      <obj_property name="ObjectShortName">OVF_f0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/OVF_f1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_f1</obj_property>
+      <obj_property name="ObjectShortName">OVF_f1</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/OVF_b0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_b0</obj_property>
+      <obj_property name="ObjectShortName">OVF_b0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/OVF_b1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF_b1</obj_property>
+      <obj_property name="ObjectShortName">OVF_b1</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider63" type="divider">
+      <obj_property name="label">Input and Outputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[50:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[50:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/real_din" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_din</obj_property>
+      <obj_property name="ObjectShortName">real_din</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/real_dout" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">real_dout</obj_property>
+      <obj_property name="ObjectShortName">real_dout</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/nReset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nReset</obj_property>
+      <obj_property name="ObjectShortName">nReset</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/CE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider57" type="divider">
+      <obj_property name="label">Forward Registers&apos; Output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group17" type="group">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/sos_tb411/uut_sos_Fang/reg_f1/d" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">d[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sos_tb411/uut_sos_Fang/reg_f1/q" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">q[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sos_tb411/uut_sos_Fang/reg_f2/d" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">d[15:0]</obj_property>
+         <obj_property name="ObjectShortName">d[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sos_tb411/uut_sos_Fang/reg_f2/q" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">q[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q[15:0]</obj_property>
+         <obj_property name="label">q[15:0] f2</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider65" type="divider">
+      <obj_property name="label">Forward Multiplier&apos;s Output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/uut_sos_Fang/mul_f0/out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/uut_sos_Fang/mul_f1/out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sos_tb411/uut_sos_Fang/mul_f2/out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+   </wvobject>
+</wave_config>

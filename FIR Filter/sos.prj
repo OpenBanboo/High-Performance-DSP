@@ -1,0 +1,4 @@
+verilog work "../HW1/HW1/register.v"
+verilog work "../../HW3/Project/HW3/SourceCode/sMult.v"
+verilog work "../../HW3/Project/HW3/SourceCode/fixpoint_adder.v"
+verilog work "sos.v"

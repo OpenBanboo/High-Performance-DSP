@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/multiplier_float_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="multiplier_float_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="divider26" type="divider">
+      <obj_property name="label">Binary Number Presentation</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group27" type="group">
+      <obj_property name="label">Binary Number Presentation</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/multiplier_float_tb/OP1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">OP1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OP1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multiplier_float_tb/OP2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">OP2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OP2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multiplier_float_tb/result" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">result[31:0]</obj_property>
+         <obj_property name="ObjectShortName">result[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multiplier_float_tb/CLK" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffffff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multiplier_float_tb/RST" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RST</obj_property>
+         <obj_property name="ObjectShortName">RST</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffffff</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group23" type="group">
+      <obj_property name="label">Exception(in and out)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/multiplier_float_tb/exce_in" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">exce_in</obj_property>
+         <obj_property name="ObjectShortName">exce_in</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multiplier_float_tb/exce_out" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">exce_out</obj_property>
+         <obj_property name="ObjectShortName">exce_out</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider24" type="divider">
+      <obj_property name="label">Real Number Presentation</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group25" type="group">
+      <obj_property name="label">Real Number Presentation</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/multiplier_float_tb/real_OP1" type="other" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">real_OP1</obj_property>
+         <obj_property name="ObjectShortName">real_OP1</obj_property>
+         <obj_property name="label">real_OP1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multiplier_float_tb/real_OP2" type="other" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">real_OP2</obj_property>
+         <obj_property name="ObjectShortName">real_OP2</obj_property>
+         <obj_property name="label">real_OP2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multiplier_float_tb/real_result" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">real_result</obj_property>
+         <obj_property name="ObjectShortName">real_result</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/multiplier_float_tb/Fang_floMul/sum_exp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum_exp[8:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_exp[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiplier_float_tb/Fang_floMul/BIAS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIAS[7:0]</obj_property>
+      <obj_property name="ObjectShortName">BIAS[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiplier_float_tb/Fang_floMul/mul_mat" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mul_mat[47:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_mat[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiplier_float_tb/Fang_floMul/tmp_mat" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tmp_mat[47:0]</obj_property>
+      <obj_property name="ObjectShortName">tmp_mat[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiplier_float_tb/Fang_floMul/tmp_exp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tmp_exp[8:0]</obj_property>
+      <obj_property name="ObjectShortName">tmp_exp[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiplier_float_tb/Fang_floMul/tmp_mat_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tmp_mat_r[23:0]</obj_property>
+      <obj_property name="ObjectShortName">tmp_mat_r[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/multiplier_float_tb/Fang_floMul/exception" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">exception</obj_property>
+      <obj_property name="ObjectShortName">exception</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,5 @@
+verilog isim_temp "../../HW3/Project/HW3/SourceCode/sMult.v"
+verilog isim_temp "../../HW3/Project/HW3/SourceCode/fixpoint_adder.v"
+verilog isim_temp "FIR_N_multicycle.v"
+verilog isim_temp "tb_FIR_N_multicycle.v"
+verilog isim_temp "D:/Xilinx14.6/14.6/ISE_DS/ISE//verilog/src/glbl.v"

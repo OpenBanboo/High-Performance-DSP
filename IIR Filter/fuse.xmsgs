@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_scaled_tb.v" Line 76: Port <arg fmt="%s" index="1">CE</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="756" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/fixpoint_adder.v" Line 34: Repetition multiplier must be positive
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="756" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/fixpoint_adder.v" Line 44: Repetition multiplier must be positive
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="756" delta="unknown" >"D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/fixpoint_adder.v" Line 58: Repetition multiplier must be positive
+</msg>
+
+</messages>
+

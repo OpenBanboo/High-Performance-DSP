@@ -1,0 +1,5 @@
+verilog work "swap.v"
+verilog work "nor_cor.v"
+verilog work "align.v"
+verilog work "add_sub.v"
+verilog work "adder_float.v"

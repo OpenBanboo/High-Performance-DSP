@@ -1,0 +1,35 @@
+Running: D:\Xilinx14.6\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_scaled_tb_isim_beh.exe -prj D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_scaled_tb_beh.prj work.sos_scaled_tb work.glbl 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sMult.v" into library work
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/register.v" into library work
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/fixpoint_adder.v" into library work
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_scaled.v" into library work
+Analyzing Verilog file "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_scaled_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx14.6/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_scaled_tb.v" Line 76: Port CE is not connected to this instance
+Completed static elaboration
+Compiling module register(N=16)
+Compiling module sMult(WI1=5,WF1=11,WI2=5,WF2=11,...
+Compiling module fixpoint_adder(WI1=10,WF1=22,WI2...
+Compiling module fixpoint_adder(WI1=10,WF1=22,WI2...
+Compiling module register(N=51)
+Compiling module sMult(WI1=13,WF1=22,WI2=5,WF2=11...
+Compiling module sMult(WI1=18,WF1=33,WI2=5,WF2=11...
+Compiling module fixpoint_adder(WI1=12,WF1=22,WI2...
+WARNING:HDLCompiler:756 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/fixpoint_adder.v" Line 34: Repetition multiplier must be positive
+WARNING:HDLCompiler:756 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/fixpoint_adder.v" Line 44: Repetition multiplier must be positive
+WARNING:HDLCompiler:756 - "D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/fixpoint_adder.v" Line 58: Repetition multiplier must be positive
+Compiling module fixpoint_adder(WI1=23,WF1=44,WI2...
+Compiling module sos_scaled_default
+Compiling module sos_scaled_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 12 Verilog Units
+Built simulation executable D:/Synchronous/Graduate Studies/Homework/672/HWprojects/HW6-IIR/sos_scaled_tb_isim_beh.exe
+Fuse Memory Usage: 30196 KB
+Fuse CPU Usage: 420 ms
